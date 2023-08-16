@@ -1,0 +1,277 @@
+.about__container {
+  padding: 120px 15px 60px;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.about__text-wrapper {
+  display: flex;
+  gap: 159px;
+  max-width: 1134px;
+}
+
+.about__title {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 477px;
+
+  & h2 {
+    width: 100%;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 400;
+    color: #316dc2;
+    margin: 0;
+  }
+
+  & p {
+    margin: 0;
+    width: 100%;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+    letter-spacing: -0.7px;
+  }
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 498px;
+
+  & h3 {
+    width: 100%;
+    font-size: 32px;
+    line-height: 36px;
+    color: #316dc2;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  & p {
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: -0.7px;
+  }
+}
+
+.about__button {
+  max-width: 277px;
+  letter-spacing: 0;
+}
+
+.about__advantages {
+  width: 100%;
+  background-color: #316dc2;
+  border-radius: 20px;
+  padding: 70px 106px 56px;
+
+  & ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px;
+    list-style: none;
+  }
+
+  & li {
+    position: relative;
+    max-width: 478px;
+    display: flex;
+    align-items: center;
+    padding: 30px 60px;
+    border: 1px solid $color-default-white;
+    border-radius: 16px;
+    justify-content: space-between;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 42px;
+      height: 42px;
+      background-color: #316dc2;
+      background-image: url("../../img/svg/star.svg");
+      background-size: 18px 22px;
+      background-repeat: no-repeat;
+      background-position: center;
+      top: -21px;
+      left: -21px;
+    }
+
+    & span {
+      max-width: 171px;
+      font-size: 26px;
+      line-height: 30px;
+      font-weight: 400;
+      color: $color-default-white;
+      letter-spacing: -0.56px;
+      text-transform: uppercase;
+    }
+
+    & p {
+      max-width: 180px;
+      line-height: 20px;
+      color: #f0efe9;
+      margin: 0;
+      letter-spacing: -0.5px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .about__container {
+    padding: 100px 30px 50px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .about__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 498px;
+  }
+
+  .about__title {
+    max-width: 100%;
+
+    & h2 {
+      width: 100%;
+      font-size: 34px;
+      line-height: 50px;
+    }
+
+    & p {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  .about__text {
+    gap: 30px;
+    max-width: 100%;
+
+    & h3 {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    & p {
+      line-height: 20px;
+    }
+  }
+
+  .about__button {
+    max-width: 221px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .about__advantages {
+    padding: 40px;
+
+    & ul {
+      column-gap: 50px;
+      row-gap: 42px;
+    }
+
+    & li {
+      max-width: 100%;
+      min-width: 264px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px;
+      justify-content: flex-start;
+      gap: 12px;
+      min-height: 168px;
+
+      & span {
+        max-width: 61%;
+        font-size: 20px;
+        line-height: 22px;
+      }
+
+      & p {
+        max-width: 100%;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about__container {
+    padding: 67px 0 33px;
+  }
+
+  .about__text-wrapper {
+    max-width: 100%;
+  }
+
+  .about__title {
+    max-width: 100%;
+    gap: 21px;
+
+    & h2 {
+      width: 100%;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  .about__text {
+    gap: 20px;
+
+    & h3 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    & p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .about__advantages {
+    padding: 42px 20px 40px 30px;
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    & li {
+      max-width: 100%;
+      min-width: 100%;
+      padding: 24px 20px;
+      gap: 8px;
+      min-height: 128px;
+
+      & span {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      & p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}

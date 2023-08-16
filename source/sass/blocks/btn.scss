@@ -12,6 +12,8 @@
   text-transform: uppercase;
   position: relative;
   letter-spacing: 0.28px;
+  background-color: transparent;
+  cursor: pointer;
 
   &::after {
     position: absolute;
@@ -33,48 +35,80 @@
     z-index: 1;
   }
 
-  &:hover {
+  &:not(:disabled):hover {
     @include hover;
     background-color: #316dc2;
     color: $color-default-white;
   }
 
-  &:hover::after {
+  &:not(:disabled):hover::after {
     background-color: $color-default-white;
   }
 
-  &:hover svg {
+  &:not(:disabled):hover svg {
     color: #316dc2;
     transform: rotate(45deg);
   }
 
-  &:focus {
+  &:not(:disabled):focus {
     @include focus;
     background-color: #316dc2;
     color: $color-default-white;
   }
 
-  &:focus::after {
+  &:not(:disabled):focus::after {
     background-color: $color-default-white;
   }
 
-  &:focus svg {
+  &:not(:disabled):focus svg {
     color: #316dc2;
     transform: rotate(45deg);
   }
 
-  &:active {
+  &:not(:disabled):active {
     @include active;
     background-color: #316dc2;
     color: rgba(255, 255, 255, 0.7);
   }
 
-  &:active::after {
+  &:not(:disabled):active::after {
     background-color: $color-default-white;
   }
 
-  &:active svg {
+  &:not(:disabled):active svg {
     color: rgba(49, 109, 194, 0.7);
     transform: rotate(45deg);
+  }
+
+  &:disabled {
+    border-color: #a9afb7;
+    color: #a9afb7;
+    cursor: default;
+  }
+
+  &:disabled::after {
+    background-color: #a9afb7;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .btn {
+    min-height: 42px;
+    padding: 5px 38px 5px 20px;
+    font-size: 12px;
+    line-height: 12px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 34px;
+      height: 34px;
+    }
+
+    & svg {
+      width: 8px;
+      height: 8px;
+      right: 16px;
+    }
   }
 }
