@@ -2,6 +2,8 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {burgerMenuInit} from './modules/burger/burger-init';
+import {swiperIntroInit} from './modules/swiper/swiper-init';
+
 
 // ---------------------------------
 
@@ -15,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   burgerMenuInit();
+  swiperIntroInit();
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
