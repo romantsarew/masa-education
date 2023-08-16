@@ -38,4 +38,8 @@
   <symbol viewBox="0 0 10 10" id="arrow">
     <path d="m1 9 8-8m0 0H1.053M9 1v7.947" stroke="currentColor" />
   </symbol>
+  <symbol viewBox="0 0 20 20" id="modal-close">
+    <path d="m1 19 9-9m0 0 9-9m-9 9 9 9m-9-9L1 1" stroke="currentColor" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
 </svg>

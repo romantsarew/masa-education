@@ -1,0 +1,232 @@
+.form {
+  width: 100%;
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.form__select {
+  margin: 0;
+  padding: 0;
+}
+
+.form__input {
+  width: 100%;
+
+  & label {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(72, 72, 72, 0.8);
+  }
+
+  & input,
+  .form__select-button {
+    border: 1px solid rgba(72, 72, 72, 0.3);
+    border-radius: 8px;
+    min-height: 50px;
+    padding: 5px 15px;
+    padding: 12px 20px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+
+    &:not(:disabled):hover {
+      @include hover;
+      border-color: rgba(72, 72, 72, 1);
+    }
+
+    &:not(:disabled):focus {
+      @include focus;
+      outline: none;
+      border-color: rgba(72, 72, 72, 1);
+    }
+
+    &:not(:disabled):active {
+      @include active;
+      border-color: rgba(72, 72, 72, 1);
+    }
+
+    &:disabled {
+      @include hover;
+      border-color: rgba(169, 175, 183, 0.5);
+      background-color: rgba(169, 175, 183, 0.2);
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: #ff5e66;
+      background-color: rgba(255, 94, 102, 0.2);
+    }
+  }
+}
+
+.form__select-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.form__select-label {
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(72, 72, 72, 0.8);
+}
+
+.form__select-error {
+  bottom: -21px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form .form__select-icon {
+  width: 15px;
+  height: 7px;
+  background-color: #484848;
+}
+
+.form__select-list {
+  bottom: -4px;
+  border: 1px solid #484848;
+  border-radius: 8px;
+  min-height: fit-content;
+  max-height: 194px;
+  z-index: 2;
+}
+
+.form__select-item {
+  padding: 17px 20px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+
+  &:hover:not(:focus-visible) {
+    @include hover;
+    color: #316dc2;
+    background-color: transparent;
+  }
+
+  &:focus:not(:focus-visible) {
+    @include focus;
+    color: $color-default-white;
+    background-color: #316dc2;
+  }
+
+  &:active:not(:focus-visible) {
+    @include active;
+    color: $color-default-white;
+    background-color: #316dc2;
+  }
+}
+
+.form__check {
+  & label {
+    display: flex;
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+    min-height: 20px;
+  }
+
+  & input[type="checkbox"]:checked + .form__sort::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url("../../img/svg/check.svg");
+    background-repeat: no-repeat;
+    top: 7px;
+    left: 5px;
+  }
+
+  & input {
+    display: none;
+  }
+}
+
+.form__name {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  color: rgba(72, 72, 72, 0.9);
+  letter-spacing: -0.4px;
+  align-self: center;
+}
+
+.form__sort {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #316dc2;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+
+  &:not(:disabled):hover {
+    @include hover;
+    background-color: #b4adad;
+  }
+
+  &:not(:disabled):focus {
+    @include focus;
+    background-color: #316dc2;
+    outline: 1px solid #a9afb7;
+  }
+}
+
+.form__button {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    width: 100%;
+
+    & form {
+      gap: 15px;
+    }
+  }
+
+  .form__input {
+    & label {
+      gap: 8px;
+      line-height: 14px;
+    }
+  }
+
+  .form__select-label {
+    margin-bottom: 8px;
+    line-height: 14px;
+  }
+
+  .form__select-error {
+    bottom: -16px;
+    line-height: 14px;
+  }
+
+  .form__select-list {
+    max-height: 105px;
+  }
+
+  .form__name {
+    line-height: 14px;
+  }
+
+  .form__sort {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  .form__button {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 60px 0 70px;
+  }
+}
