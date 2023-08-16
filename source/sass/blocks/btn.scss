@@ -1,26 +1,80 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
+  min-height: 54px;
+  border: 1px solid #316dc2;
+  border-radius: 30px;
+  padding: 0 75px 0 25px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  color: #316dc2;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 0.28px;
 
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
-  cursor: pointer;
-
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 46px;
+    height: 46px;
+    background-color: #316dc2;
+    border-radius: 50%;
+    right: 4px;
   }
 
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
+  & svg {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    right: 21px;
+    color: $color-default-white;
+    z-index: 1;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
+  &:hover {
+    @include hover;
+    background-color: #316dc2;
+    color: $color-default-white;
+  }
+
+  &:hover::after {
+    background-color: $color-default-white;
+  }
+
+  &:hover svg {
+    color: #316dc2;
+    transform: rotate(45deg);
+  }
+
+  &:focus {
+    @include focus;
+    background-color: #316dc2;
+    color: $color-default-white;
+  }
+
+  &:focus::after {
+    background-color: $color-default-white;
+  }
+
+  &:focus svg {
+    color: #316dc2;
+    transform: rotate(45deg);
+  }
+
+  &:active {
+    @include active;
+    background-color: #316dc2;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:active::after {
+    background-color: $color-default-white;
+  }
+
+  &:active svg {
+    color: rgba(49, 109, 194, 0.7);
+    transform: rotate(45deg);
   }
 }

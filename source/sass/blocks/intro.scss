@@ -1,0 +1,301 @@
+.intro {
+  width: 100%;
+  min-height: 800px;
+}
+
+.intro__slide {
+  position: relative;
+  background-size: cover;
+  padding: 0 15px;
+  height: auto;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(49, 109, 194, 0.2);
+    z-index: 0;
+  }
+}
+
+.intro__slide-container {
+  position: relative;
+  padding: 473px 0 60px;
+  min-height: 800px;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro__slide--internship {
+  background-image: url("../../img/intro/internship.webp");
+  background-position: center;
+}
+
+.intro__slide--volunteering {
+  background-image: url("../../img/intro/volunteering.webp");
+  background-position: center;
+}
+
+.intro__slide--experience {
+  background-image: url("../../img/intro/experience.webp");
+  background-position: center;
+}
+
+.swiper .intro__slide-pagination {
+  position: relative;
+  width: fit-content;
+  background-color: $color-default-white;
+  border-radius: 20px 20px 0px 0;
+  padding: 14px 20px;
+  line-height: 10px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  max-width: 968px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("../../img/svg/pagination-angle.svg");
+    bottom: 0;
+    right: -20px;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0;
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: inherit;
+  border: 1px solid #316dc2;
+  margin: 0;
+  opacity: 1;
+
+  &:not(:disabled):hover {
+    @include hover;
+    border: 1px solid #316dc2;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):focus {
+    @include focus;
+    border: 1px solid #316dc2;
+  }
+
+  &:not(:disabled):active {
+    @include active;
+    background-color: #316dc2;
+    border-color: #316dc2;
+  }
+
+  &:disabled {
+    opacity: 10%;
+    cursor: default;
+  }
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: #316dc2;
+  border-color: #316dc2;
+}
+
+.intro__slide-top {
+  padding: 40px 46px 30px;
+  background-color: $color-default-white;
+  border-radius: 0 30px 30px 0;
+  margin-top: -10px;
+  max-width: 968px;
+
+  & p {
+    margin: 0;
+    font-size: 54px;
+    line-height: 62px;
+    color: #316dc2;
+  }
+}
+
+.intro__slide-bottom {
+  position: relative;
+  padding: 0 46px 35px;
+  background-color: $color-default-white;
+  max-width: 772px;
+  display: flex;
+  border-radius: 0 0 30px 30px;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-image: url("../../img/svg/pagination-angle.svg");
+    background-repeat: no-repeat;
+    background-size: 26px 26px;
+    top: 0;
+    right: -26px;
+    transform: rotate(90deg);
+  }
+
+  & p {
+    margin: 0;
+    font-weight: 400;
+    max-width: 470px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .intro {
+    min-height: 1024px;
+  }
+
+  .intro__slide {
+    padding: 0 45px;
+  }
+
+  .intro__slide-container {
+    padding: 709px 0 60px 0;
+    min-height: 1024px;
+    max-width: 659px;
+    margin: 0 auto;
+  }
+
+  .intro__slide-top {
+    padding: 30px 40px 24px;
+
+    & p {
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+
+  .intro__slide-bottom {
+    padding: 0 40px 36px;
+    max-width: 591px;
+
+    & p {
+      line-height: 20px;
+      max-width: 290px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .intro {
+    min-height: 568px;
+  }
+
+  .intro__slide {
+    padding: 0 15px;
+  }
+
+  .intro__slide-container {
+    padding: 269px 0 20px;
+    min-height: 100%;
+    max-width: 290px;
+    margin: 0 auto;
+  }
+
+  .swiper .intro__slide-pagination {
+    padding: 10px 16px;
+    line-height: 8px;
+    border-radius: 12px 12px 0 0;
+
+    &::after {
+      width: 10px;
+      height: 10px;
+      background-size: 10px 10px;
+      right: -10px;
+    }
+  }
+
+  .swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+
+  .intro__slide-top {
+    padding: 20px 15px 16px;
+    border-radius: 0 16px 16px 0;
+
+    & p {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  .intro__slide-bottom {
+    padding: 0;
+    max-width: 261px;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: flex-start;
+
+    &::after {
+      width: 10px;
+      height: 10px;
+      background-size: 10px 10px;
+      right: -10px;
+    }
+
+    & p {
+      font-size: 14px;
+      max-width: 261px;
+      padding: 0 14px 15px;
+      background-color: $color-default-white;
+      border-radius: 0 0 14px 0;
+    }
+
+    & div {
+      position: relative;
+      background-color: $color-default-white;
+      width: 182px;
+      border-radius: 0 0 14px 14px;
+      padding: 10px 15px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-size: 10px 10px;
+        right: -10px;
+        background-image: url("../../img/svg/pagination-angle.svg");
+        transform: rotate(90deg);
+        top: 0;
+        right: -10px;
+      }
+    }
+  }
+
+  .intro__link {
+    min-height: 42px;
+    padding: 0 53px 0 15px;
+    font-size: 12px;
+    line-height: 12px;
+    max-width: 100%;
+
+    &::after {
+      width: 34px;
+      height: 34px;
+    }
+
+    & svg {
+      width: 8px;
+      height: 8px;
+      right: 16px;
+    }
+  }
+}

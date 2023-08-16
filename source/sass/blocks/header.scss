@@ -105,7 +105,7 @@
     content: "";
     width: 12px;
     height: 12px;
-    background-image: url("../../img/svg/nav-bird.svg");
+    background-image: url("../img/svg/nav-bird.svg");
     background-repeat: no-repeat;
     background-position: center;
     top: 1px;
@@ -184,7 +184,7 @@
     right: 4px;
     background-color: #316dc2;
     border-radius: 50%;
-    background-image: url("../../img/svg/burger.svg");
+    background-image: url("../img/svg/burger.svg");
     background-repeat: no-repeat;
     background-size: 20px 10px;
     background-position: center;
@@ -234,7 +234,7 @@
     right: 4px;
     background-color: $color-default-white;
     border-radius: 50%;
-    background-image: url("../../img/svg/burger-close.svg");
+    background-image: url("../img/svg/burger-close.svg");
     background-repeat: no-repeat;
     background-size: 20px 20px;
     background-position: center;
@@ -281,7 +281,7 @@
 
 @media (max-width: $mobile-width) {
   .header__container {
-    padding-top: 20px;
+    padding: 20px 0 0;
   }
 
   .header__nav {
