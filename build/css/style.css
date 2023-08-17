@@ -3402,6 +3402,10 @@ button,
     line-height: 20px;
   }
 }
+.programs {
+  padding-bottom: 131px;
+}
+
 .programs__container {
   padding: 60px 0 0;
   max-width: 1240px;
