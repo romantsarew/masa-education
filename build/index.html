@@ -212,6 +212,119 @@
           </div>
         </div>
       </section>
+      <section class="programs">
+        <div class="container">
+          <div class="programs__container">
+            <div class="programs__top">
+              <h2>Программы</h2>
+              <a class="programs__link btn" href="#">все программы
+                <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use href="img/sprite/sprite.svg#arrow"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="programs__slider swiper">
+          <div class="programs__wrapper swiper-wrapper">
+            <div class="programs__slide swiper-slide programs__slide--internship">
+              <div class="programs__text">
+                <h3>Стажировки</h3>
+                <div>
+                  <p>Получите незаменимый опыт работы в крупнейших израильских компаниях. </p>
+                  <a href="#">
+                    <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite/sprite.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="programs__slide swiper-slide programs__slide--volunteering">
+              <div class="programs__text">
+                <h3>Волонтёрство</h3>
+                <div>
+                  <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                  <a href="#">
+                    <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite/sprite.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="programs__slide swiper-slide programs__slide--education">
+              <div class="programs__text">
+                <h3>Учёба</h3>
+                <div>
+                  <p>Получите образование и измените свое будущее.</p>
+                  <a href="#">
+                    <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite/sprite.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="programs__slide swiper-slide programs__slide--internship">
+              <div class="programs__text">
+                <h3>Стажировки</h3>
+                <div>
+                  <p>Получите незаменимый опыт работы в крупнейших израильских компаниях. </p>
+                  <a href="#">
+                    <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite/sprite.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="programs__slide swiper-slide programs__slide--education">
+              <div class="programs__text">
+                <h3>Волонтёрство</h3>
+                <div>
+                  <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                  <a href="#">
+                    <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite/sprite.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="programs__slide swiper-slide programs__slide--volunteering">
+              <div class="programs__text">
+                <h3>Учёба</h3>
+                <div>
+                  <p>Получите образование и измените свое будущее.</p>
+                  <a href="#">
+                    <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite/sprite.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="programs__control">
+          <div class="programs__scrollbar swiper-scrollbar"></div>
+          <div class="programs__buttons">
+            <button class="programs__button programs__button--prev" type="button">
+              <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-label="предыдущий слайд." role="img">
+                <use href="img/sprite/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+            <button class="programs__button programs__button--next" type="button">
+              <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="следующий слайд."
+                role="img">
+                <use href="img/sprite/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">
@@ -302,7 +415,7 @@
         </button>
         <h2 class="modal__title">Напишите нам</h2>
         <p class="modal__description">Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
-        <div class="modal__form form">
+        <div class="modal__form form" data-form-validate data-callback="base">
           <form action="https://echo.htmlacademy.ru" method="get">
             <div class="form__name form__input" data-validate-type="text" data-limitation="name"
               data-message-base="поле обязательно к заполнению" data-message-extra="некорректно заполнено поле"
