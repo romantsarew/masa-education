@@ -337,7 +337,8 @@
                   <source media="(max-width: 1199px)" type="image/webp"
                     srcset="img/travel-tablet.webp 1x, img/travel-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/travel-desk.webp 1x, img/travel-desk@2x.webp 2x">
-                  <source media="(max-width: 1199px)" srcset="img/travel-tablet.jpg 1x, img/travel-tablet@2x.jpg 2x" width="678" height="375">
+                  <source media="(max-width: 1199px)" srcset="img/travel-tablet.jpg 1x, img/travel-tablet@2x.jpg 2x"
+                    width="678" height="375">
                   <img src="img/travel-desk.jpg" srcset="img/travel-desk@2x.jpg" width="498" height="363"
                     alt="указатель с расстоянием до крупных городов, в Израиле.">
                 </picture>
@@ -364,82 +365,224 @@
           </div>
         </div>
       </section>
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__container">
-          <a class="footer__logo" href="index.html">
-            <svg width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <use href="img/sprite/sprite.svg#logo"></use>
-            </svg>
-          </a>
-          <nav class="footer__nav">
-            <ul>
+      <section class="news">
+        <div class="container">
+          <div class="news__container">
+            <h2>Новости и материалы</h2>
+            <ul data-tabs="news__controls">
               <li>
-                <a href="#about">
-                  О проекте
-                </a>
+                <button class="news__control is-active" type="button">общее</button>
               </li>
               <li>
-                <a href="#education">
-                  Программы
-                </a>
+                <button class="news__control" type="button">Волонтёрство</button>
               </li>
               <li>
-                <a href="#how">
-                  Как поехать
-                </a>
+                <button class="news__control" type="button">Стажировки</button>
               </li>
               <li>
-                <a href="#opinions">
-                  Отзывы
-                </a>
+                <button class="news__control" type="button">Карьера</button>
               </li>
               <li>
-                <a href="#news">
-                  Новости
-                </a>
-              </li>
-              <li>
-                <a href="#contacts">
-                  Контакты
-                </a>
+                <button class="news__control" type="button">путешествия</button>
               </li>
             </ul>
-          </nav>
-          <div class="footer__social">
-            <ul class="footer__social-list">
-              <li>
-                <a class="footer__vk" href="#">
-                  <svg width="16" height="9" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                    aria-label="мы вКонтакте.">
-                    <use href="img/sprite/sprite.svg#vk"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a class="footer__ok" href="#">
-                  <svg width="10" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                    aria-label="мы в Одноклассниках.">
-                    <use href="img/sprite/sprite.svg#ok"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a class="footer__reddit" href="#">
-                  <svg width="15" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                    aria-label="мы в Реддите.">
-                    <use href="img/sprite/sprite.svg#reddit"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            <div class="news__swiper swiper">
+              <div class="news__wrapper swiper-wrapper">
+                <div class="news__slide swiper-slide news__slide--internship">
+                  <div class="news__text">
+                    <span>23/03/2023</span>
+                    <h3>Интервью с участницей программы стажировки</h3>
+                    <div>
+                      <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                      <a href="#">
+                        <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite/sprite.svg#arrow"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="news__slide swiper-slide news__slide--travel">
+                  <div class="news__text">
+                    <span>20/03/2023</span>
+                    <h3>Путешествуем по Израилю</h3>
+                    <div>
+                      <p>Какие места посещают наши студенты весной</p>
+                      <a href="#">
+                        <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite/sprite.svg#arrow"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="news__slide swiper-slide news__slide--volunteering">
+                  <div class="news__text">
+                    <span>17/03/2023</span>
+                    <h3>Новая программа волонтёрства</h3>
+                    <div>
+                      <p>Программа помощи детям длительностью 4 месяца</p>
+                      <a href="#">
+                        <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite/sprite.svg#arrow"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="news__slide swiper-slide news__slide--career">
+                  <div class="news__text">
+                    <span>10/03/2023</span>
+                    <h3>Построй свою карьеру</h3>
+                    <div>
+                      <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                      <a href="#">
+                        <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite/sprite.svg#arrow"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="news__slide swiper-slide news__slide--internship">
+                  <div class="news__text">
+                    <span>23/03/2023</span>
+                    <h3>Интервью с участницей программы стажировки</h3>
+                    <div>
+                      <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                      <a href="#">
+                        <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite/sprite.svg#arrow"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="news__slide swiper-slide news__slide--travel">
+                  <div class="news__text">
+                    <span>20/03/2023</span>
+                    <h3>Путешествуем по Израилю</h3>
+                    <div>
+                      <p>Какие места посещают наши студенты весной</p>
+                      <a href="#">
+                        <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite/sprite.svg#arrow"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="news__slide swiper-slide news__slide--volunteering">
+                  <div class="news__text">
+                    <span>17/03/2023</span>
+                    <h3>Новая программа волонтёрства</h3>
+                    <div>
+                      <p>Программа помощи детям длительностью 4 месяца</p>
+                      <a href="#">
+                        <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite/sprite.svg#arrow"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="news__slider-controls">
+              <button class="news__slider-button news__slider-button--prev" type="button">
+                <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  aria-label="предыдущий слайд." role="img">
+                  <use href="img/sprite/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div class="news__slider-pagination swiper-pagination"></div>
+              <button class="news__slider-button news__slider-button--next" type="button">
+                <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="следующий слайд."
+                  role="img">
+                  <use href="img/sprite/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
           </div>
-          <span class="footer__rights">Masa © 2023 Все права защищены</span>
-          <a class="footer__copyright" href="#">Политика конфиденциальности</a>
         </div>
+  </div>
+  </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__container">
+        <a class="footer__logo" href="index.html">
+          <svg width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use href="img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <nav class="footer__nav">
+          <ul>
+            <li>
+              <a href="#about">
+                О проекте
+              </a>
+            </li>
+            <li>
+              <a href="#education">
+                Программы
+              </a>
+            </li>
+            <li>
+              <a href="#how">
+                Как поехать
+              </a>
+            </li>
+            <li>
+              <a href="#opinions">
+                Отзывы
+              </a>
+            </li>
+            <li>
+              <a href="#news">
+                Новости
+              </a>
+            </li>
+            <li>
+              <a href="#contacts">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__social">
+          <ul class="footer__social-list">
+            <li>
+              <a class="footer__vk" href="#">
+                <svg width="16" height="9" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                  aria-label="мы вКонтакте.">
+                  <use href="img/sprite/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="footer__ok" href="#">
+                <svg width="10" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                  aria-label="мы в Одноклассниках.">
+                  <use href="img/sprite/sprite.svg#ok"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="footer__reddit" href="#">
+                <svg width="15" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                  aria-label="мы в Реддите.">
+                  <use href="img/sprite/sprite.svg#reddit"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <span class="footer__rights">Masa © 2023 Все права защищены</span>
+        <a class="footer__copyright" href="#">Политика конфиденциальности</a>
       </div>
-    </footer>
+    </div>
+  </footer>
   </div>
 
   <!-- Модалки -->
