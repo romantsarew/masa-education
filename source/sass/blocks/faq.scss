@@ -1,0 +1,291 @@
+.faq__container {
+  max-width: 1240px;
+  padding: 60px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+
+  & h2 {
+    margin: 0;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 400;
+    color: #316dc2;
+  }
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.faq__item {
+  position: relative;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px;
+  justify-content: space-between;
+  border: 1px solid #316dc2;
+  min-height: 120px;
+
+  &:hover {
+    background-color: $color-default-white;
+  }
+
+  &:hover > button {
+    background-color: $color-default-white;
+    border: 1px solid #316dc2;
+  }
+
+  &:hover > button::before {
+    border: 1px solid #316dc2;
+  }
+
+  &:hover > button::after {
+    border: 1px solid #316dc2;
+  }
+
+  &:focus {
+    background-color: $color-default-white;
+  }
+
+  &:focus > button {
+    background-color: $color-default-white;
+    border: 1px solid #316dc2;
+  }
+
+  &:focus > button::before {
+    border: 1px solid #316dc2;
+  }
+
+  &:focus > button::after {
+    border: 1px solid #316dc2;
+  }
+
+  &:hover > button:active {
+    background-color: #275699;
+  }
+
+  &:hover > button:active:before {
+    border: 1px solid $color-default-white;
+  }
+
+  &:hover > button:active::after {
+    border: 1px solid $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 30%;
+  }
+}
+
+.faq__item.is-active {
+  background-color: #316dc2;
+
+  & h3 {
+    color: $color-default-white;
+    margin-bottom: 20px;
+  }
+
+  & p {
+    color: $color-default-white;
+    margin: 0;
+    max-width: 700px;
+  }
+
+  & button {
+    top: 60px;
+  }
+
+  &:hover button {
+    @include hover;
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+  }
+
+  &:hover button::before {
+    @include hover;
+    border-color: $color-default-white;
+  }
+
+  &:focus button {
+    @include focus;
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+  }
+
+  &:focus button::before {
+    @include hover;
+    border-color: $color-default-white;
+  }
+
+  &:active {
+    @include focus;
+    background-color: #275699;
+  }
+
+  &:active button {
+    @include focus;
+    background-color: $color-default-white;
+  }
+
+  &:active button::before {
+    @include hover;
+    border-color: #275699;
+  }
+}
+
+.faq__title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 40px;
+  color: #316dc2;
+  font-weight: 400;
+  max-width: 70%;
+}
+
+.faq__button {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #316dc2;
+  border: none;
+
+  &.is-closed {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 1px;
+      border: 1px solid $color-default-white;
+      left: 11px;
+      top: 19px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 18px;
+      border: 1px solid $color-default-white;
+      top: 11px;
+      left: 19px;
+    }
+
+    &:active {
+      background-color: #275699;
+    }
+  }
+
+  &.is-opened {
+    background-color: $color-default-white;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 1px;
+      border: 1px solid #316dc2;
+      left: 11px;
+    }
+  }
+
+  &:disabled {
+    opacity: 30%;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .faq__container {
+    max-width: 100%;
+    padding: 50px 30px;
+    gap: 40px;
+
+    & h2 {
+      font-size: 34px;
+    }
+  }
+
+  .faq__item {
+    width: 100%;
+    padding: 30px;
+    min-height: 102px;
+    justify-content: center;
+  }
+
+  .faq__item.is-active {
+    & button {
+      right: 30px;
+      top: 50px;
+    }
+
+    & p {
+      max-width: 100%;
+    }
+  }
+
+  .faq__title {
+    margin: 0;
+    font-size: 22px;
+    line-height: 40px;
+    max-width: 80%;
+  }
+
+  .faq__button {
+    right: 30px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .faq__container {
+    max-width: 100%;
+    padding: 33px 0;
+    gap: 30px;
+
+    & h2 {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .faq__item {
+    padding: 20px 15px;
+    min-height: 80px;
+    justify-content: center;
+  }
+
+  .faq__item.is-active {
+    & button {
+      top: 40px;
+      right: 15px;
+    }
+
+    & p {
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .faq__title {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .faq__button {
+    right: 15px;
+  }
+}

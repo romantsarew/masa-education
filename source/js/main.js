@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {burgerMenuInit} from './modules/burger/burger-init';
 import {swiperIntroInit, swiperProgramsInit, swiperNewsInit} from './modules/swiper/swiper-init';
 import {CustomSelect} from './modules/select/custom-select';
+import {initAccordions} from './modules/accordion/init-accordion';
 
 // ---------------------------------
 
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   swiperIntroInit();
   swiperProgramsInit();
   swiperNewsInit();
+  initAccordions();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
