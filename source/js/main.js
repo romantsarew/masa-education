@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {burgerMenuInit} from './modules/burger/burger-init';
-import {swiperIntroInit, swiperProgramsInit, swiperNewsInit} from './modules/swiper/swiper-init';
+import {swiperIntroInit, swiperProgramsInit, swiperNewsInit, swiperNewsControlsInit, swiperOpinionsInit} from './modules/swiper/swiper-init';
 import {CustomSelect} from './modules/select/custom-select';
 import {initAccordions} from './modules/accordion/init-accordion';
 
@@ -22,6 +22,8 @@ window.addEventListener('DOMContentLoaded', () => {
   swiperProgramsInit();
   swiperNewsInit();
   initAccordions();
+  swiperNewsControlsInit();
+  swiperOpinionsInit();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

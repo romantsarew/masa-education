@@ -3,6 +3,8 @@
 const introSlider = document.querySelector('.intro__swiper');
 const programsSlider = document.querySelector('.programs__slider');
 const newsSlider = document.querySelector('.news__swiper');
+const newsControlsSlider = document.querySelector('.news__controls-swiper');
+const opinionsSlider = document.querySelector('.opinions__slider');
 
 function swiperIntroInit() {
   if (introSlider) {
@@ -68,6 +70,41 @@ function swiperProgramsInit() {
   }
 }
 
+function swiperNewsControlsInit() {
+  if (newsControlsSlider) {
+    const swiper = new Swiper(newsControlsSlider, {
+      cssMode: true,
+      direction: 'horizontal',
+      loop: false,
+      slideActiveClass: 'is-active',
+      initialSlide: 0,
+      keyboard: true,
+
+      breakpoints: {
+        // when window width is >= 1200px
+        1200: {
+          initialSlide: 1,
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+        },
+        // when window width is >= 768px
+        768: {
+          initialSlide: 1,
+          slidesPerView: 'auto',
+          spaceBetween: 10,
+        },
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 'auto',
+          spaceBetween: 1,
+          initialSlide: 0,
+          slideToClickedSlide: true,
+        },
+      },
+    });
+  }
+}
+
 function swiperNewsInit() {
   if (newsSlider) {
     const swiper = new Swiper(newsSlider, {
@@ -77,6 +114,9 @@ function swiperNewsInit() {
       breakpoints: {
         // when window width is >= 1200px
         1200: {
+          grid: {
+            rows: 1,
+          },
           initialSlide: 0,
           slidesPerView: 'auto',
           spaceBetween: 32,
@@ -85,12 +125,17 @@ function swiperNewsInit() {
         768: {
           grid: {
             rows: 2,
+            fill: 'row',
           },
           slidesPerView: 2,
           spaceBetween: 30,
         },
         // when window width is >= 320px
         320: {
+          grid: {
+            rows: 2,
+            fill: 'row',
+          },
           slidesPerView: 1,
           spaceBetween: 10,
           initialSlide: 0,
@@ -113,4 +158,47 @@ function swiperNewsInit() {
   }
 }
 
-export {swiperIntroInit, swiperProgramsInit, swiperNewsInit};
+function swiperOpinionsInit() {
+  if (opinionsSlider) {
+    const swiper = new Swiper(opinionsSlider, {
+      cssMode: true,
+      direction: 'horizontal',
+      loop: false,
+
+      breakpoints: {
+        // when window width is >= 1200px
+        1200: {
+          slidesPerView: 2,
+          spaceBetween: 32,
+          scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+          },
+        },
+        // when window width is >= 768px
+        768: {
+          scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+          },
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+          initialSlide: 0,
+        },
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          initialSlide: 0,
+        },
+      },
+
+      navigation: {
+        nextEl: '.opinions__button--next',
+        prevEl: '.opinions__button--prev',
+      },
+    });
+  }
+}
+
+export {swiperIntroInit, swiperProgramsInit, swiperNewsInit, swiperNewsControlsInit, swiperOpinionsInit};
