@@ -5,6 +5,8 @@ import {burgerMenuInit} from './modules/burger/burger-init';
 import {swiperIntroInit, swiperProgramsInit, swiperNewsInit, swiperNewsControlsInit, swiperOpinionsInit} from './modules/swiper/swiper-init';
 import {CustomSelect} from './modules/select/custom-select';
 import {initAccordions} from './modules/accordion/init-accordion';
+import {mapInit} from './modules/map/map-init';
+import {checkboxStatusChecking} from './modules/checkbox/checkbox';
 
 // ---------------------------------
 
@@ -24,6 +26,8 @@ window.addEventListener('DOMContentLoaded', () => {
   initAccordions();
   swiperNewsControlsInit();
   swiperOpinionsInit();
+  mapInit();
+  checkboxStatusChecking();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
