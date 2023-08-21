@@ -613,16 +613,16 @@
               <div class="opinions__slide-data">
                 <span>Сара
                   Аврахам</span>
-                  <div class="opinions__slide-terms">
-                    <dl>
-                      <dt>программа</dt>
-                      <dd>Masa Art Challenge</dd>
-                    </dl>
-                    <dl>
-                      <dt>Дата</dt>
-                      <dd>Осень 2022</dd>
-                    </dl>
-                  </div>
+                <div class="opinions__slide-terms">
+                  <dl>
+                    <dt>программа</dt>
+                    <dd>Masa Art Challenge</dd>
+                  </dl>
+                  <dl>
+                    <dt>Дата</dt>
+                    <dd>Осень 2022</dd>
+                  </dl>
+                </div>
               </div>
               <div class="opinions__slide-text">
                 <h3>Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни! </h3>
@@ -635,16 +635,16 @@
               <div class="opinions__slide-data">
                 <span>Давид
                   Иммервар</span>
-                  <div class="opinions__slide-terms">
-                    <dl>
-                      <dt>программа</dt>
-                      <dd>Volunteer Chance</dd>
-                    </dl>
-                    <dl>
-                      <dt>Дата</dt>
-                      <dd>Лето 2022</dd>
-                    </dl>
-                  </div>
+                <div class="opinions__slide-terms">
+                  <dl>
+                    <dt>программа</dt>
+                    <dd>Volunteer Chance</dd>
+                  </dl>
+                  <dl>
+                    <dt>Дата</dt>
+                    <dd>Лето 2022</dd>
+                  </dl>
+                </div>
               </div>
               <div class="opinions__slide-text">
                 <h3>Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.</h3>
@@ -670,6 +670,118 @@
                 <use href="img/sprite/sprite.svg#arrow"></use>
               </svg>
             </button>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="container">
+          <div class="contacts__container">
+            <div class="contacts__text">
+              <h2>Контакты</h2>
+              <ul class="contacts__text-data">
+                <li class="contacts__adress">
+                  <span>центральный офис</span>
+                  <p>г. Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</p>
+                </li>
+                <li class="contacts__phone">
+                  <span>Телефон</span>
+                  <a href="tel:+796387687676">+7 963 876 876 76</a>
+                </li>
+                <li class="contacts__mail">
+                  <span>E-mail</span>
+                  <a href="mailto:Info@masa.ru">Info@masa.ru</a>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__map-container">
+              <div class="contacts__map" id="map">
+                <picture>
+                  <source type="image/webp" srcset="img/map.webp 1x, img/map@2x.webp 2x">
+                  <img src="img/map.jpg" srcset="img/map@2x.jpg" width="1240" height="500" alt="карта проезда до нас.">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feedback">
+        <div class="container">
+          <div class="feedback__container">
+            <div class="feedback__wrapper">
+              <div class="feedback__form-container">
+                <h2>Напишите нам</h2>
+                <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
+                <div class="feedback__form form" data-form-validate data-callback="base">
+                  <form action="https://echo.htmlacademy.ru" method="get">
+                    <div class="form__name form__input" data-validate-type="text" data-limitation="name"
+                      data-message-base="поле обязательно к заполнению" data-message-extra="некорректно заполнено поле"
+                      data-required>
+                      <label for="name">Имя
+                        <input type="text" id="name" name="name" required aria-label="ваше имя.">
+                      </label>
+                    </div>
+                    <div class="form__tel form__input" data-validate-type="phone" data-on-input-validate
+                      data-message-base="поле обязательно к заполнению" data-message-extra="некорректно заполнено поле"
+                      data-message-success="Поле заполнено верно" data-required data-phone-length="18">
+                      <label for="tel">Телефон
+                        <input type="tel" id="tel" name="tel" required aria-label="ваш телефон.">
+                      </label>
+                    </div>
+                    <div class="feedback__message form__input" data-validate-type="text" data-on-input-validate
+                      data-message-base="поле обязательно к заполнению" data-required aria-invalid="false">
+                      <label for="message">Ваше сообщение
+                        <textarea type="message" id="message" name="message" required
+                          aria-label="Ваше сообщение."></textarea>
+                    </div>
+                    <div class="form__input custom-select" data-select data-validate-type="select"
+                      data-name="выбор города.">
+                      <span class="form__select-label select__label form__select-label">Выберите город</span>
+                      <span class="form__select-error custom-select__error">Выберите одну из опций</span>
+                      <button class="form__select-button custom-select__button" type="button"
+                        aria-label="Выберите одну из опций">
+                        <span class="form__select-text custom-select__text"></span>
+                        <span class="form__select-icon custom-select__icon"></span>
+                      </button>
+                      <ul class="form__select-list custom-select__list">
+                        <li class="form__select-item custom-select__item" tabindex="0" data-select-value="id-1">
+                          Санкт-Петербург
+                        </li>
+                        <li class="form__select-item custom-select__item" tabindex="0" data-select-value="id-2">
+                          Санкт-Петербург
+                        </li>
+                        <li class="form__select-item custom-select__item" tabindex="0" data-select-value="id-3">
+                          Санкт-Петербург
+                        </li>
+                        <li class="form__select-item custom-select__item" tabindex="0" data-select-value="id-4">
+                          Санкт-Петербург
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="form__check">
+                      <label for="personal">
+                        <input id="personal" name="personal" value="personal-data" type="checkbox" checked>
+                        <span class="feedback__sort form__sort" tabindex="0"></span>
+                        <span class="feedback__name form__name">Я согласен на обработку моих персональных данных</span>
+                      </label>
+                      <span class="feedback__check-error">Необходимо ваше согласие на обработку персональных
+                        данных</span>
+                    </div>
+                    <button class="feedback__button btn" type="submit">отправить
+                      <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use href="img/sprite/sprite.svg#arrow"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="feedback__image">
+                <picture>
+                  <source type="image/webp" srcset="img/feedback.webp 1x, img/feedback@2x.webp 2x">
+                  <img src="img/feedback.jpg" srcset="img/feedback@2x.jpg" width="1240" height="803"
+                    alt="спасательная вышка на фоне моря.">
+                </picture>
+              </div>
+            </div>
           </div>
         </div>
       </section>
