@@ -40,14 +40,14 @@ function swiperProgramsInit() {
           slidesPerView: 3,
           spaceBetween: 32,
           scrollbar: {
-            el: '.swiper-scrollbar',
+            el: '.programs__scrollbar',
             draggable: true,
           },
         },
         // when window width is >= 768px
         768: {
           scrollbar: {
-            el: '.swiper-scrollbar',
+            el: '.programs__scrollbar',
             draggable: true,
           },
           slidesPerView: 'auto',
@@ -96,7 +96,7 @@ function swiperNewsControlsInit() {
         // when window width is >= 320px
         320: {
           slidesPerView: 'auto',
-          spaceBetween: 1,
+          spaceBetween: 15,
           initialSlide: 0,
           slideToClickedSlide: true,
         },
@@ -137,7 +137,7 @@ function swiperNewsInit() {
             fill: 'row',
           },
           slidesPerView: 1,
-          spaceBetween: 10,
+          spaceBetween: 20,
           initialSlide: 0,
         },
       },
@@ -171,14 +171,14 @@ function swiperOpinionsInit() {
           slidesPerView: 2,
           spaceBetween: 32,
           scrollbar: {
-            el: '.swiper-scrollbar',
+            el: '.opinions__scrollbar',
             draggable: true,
           },
         },
         // when window width is >= 768px
         768: {
           scrollbar: {
-            el: '.swiper-scrollbar',
+            el: '.opinions__scrollbar',
             draggable: true,
           },
           slidesPerView: 'auto',

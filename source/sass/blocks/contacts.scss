@@ -5,7 +5,7 @@
 .contacts__container {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 120px 0;
+  padding: 118px 0;
   display: flex;
   flex-direction: column;
 }
@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 35px;
+  padding-bottom: 32px;
 
   &::after {
     position: absolute;
@@ -32,12 +32,15 @@
     line-height: 50px;
     font-weight: 400;
     color: $color-default-white;
+    max-width: 30%;
+    letter-spacing: -1.5px;
+    align-self: flex-start;
+    padding-top: 7px;
   }
 }
 
 .contacts__text-data {
   display: flex;
-  gap: 40px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -47,7 +50,7 @@
   & li {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 17px;
   }
 
   & span {
@@ -55,26 +58,50 @@
     line-height: 12px;
     color: rgba(240, 239, 233, 0.8);
     text-transform: uppercase;
+    letter-spacing: -0.5px;
   }
 
   & p {
     margin: 0;
     color: $color-default-white;
+    letter-spacing: -0.5px;
   }
 
   & a {
     color: $color-default-white;
     min-width: fit-content;
     max-width: 140px;
+    letter-spacing: -0.5px;
+
+    &:hover {
+      @include hover;
+      border-bottom: 1px solid $color-default-white;
+    }
+
+    &:focus {
+      @include focus;
+      border-bottom: 1px solid $color-default-white;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:active {
+      @include hover;
+      color: rgba(255, 255, 255, 0.8);
+    }
   }
 }
 
 .contacts__adress {
   max-width: 290px;
+  margin-right: 28px;
 }
 
 .contacts__phone {
   max-width: 140px;
+  margin-right: 55px;
 }
 
 .contacts__mail {
@@ -108,11 +135,13 @@
     justify-content: unset;
     align-items: flex-start;
     gap: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 27px;
 
     & h2 {
       font-size: 34px;
       width: 100%;
+      max-width: 100%;
+      padding-top: 0;
     }
   }
 
@@ -133,7 +162,7 @@
     }
 
     & li {
-      gap: 12px;
+      gap: 17px;
     }
   }
 
@@ -150,20 +179,27 @@
 
 @media (max-width: $mobile-width) {
   .contacts__container {
-    padding: 67px 0;
+    padding: 70px 0 68px;
   }
 
   .contacts__text {
+    padding-bottom: 24px;
+
     & h2 {
       font-size: 20px;
       line-height: 20px;
+      letter-spacing: -0.5px;
     }
   }
 
   .contacts__text-data {
     justify-content: flex-start;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
+
+    & li {
+      gap: 10px;
+    }
 
     & p {
       font-size: 14px;

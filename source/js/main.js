@@ -6,7 +6,7 @@ import {swiperIntroInit, swiperProgramsInit, swiperNewsInit, swiperNewsControlsI
 import {CustomSelect} from './modules/select/custom-select';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {mapInit} from './modules/map/map-init';
-import {checkboxStatusChecking} from './modules/checkbox/checkbox';
+import {controlButtonsToggle} from './modules/button/news-button-init';
 
 // ---------------------------------
 
@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   swiperNewsControlsInit();
   swiperOpinionsInit();
   mapInit();
-  checkboxStatusChecking();
+  controlButtonsToggle();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
