@@ -3,7 +3,7 @@ function burgerMenuInit() {
   const navMain = document.querySelector('.header__nav');
   const navButton = document.querySelector('.header__button');
   const navLinks = document.querySelectorAll('.header__nav-list a');
-  const navSublists = document.querySelectorAll('.header__nav-sublist--closed');
+  const navSublists = document.querySelectorAll('.header__nav-sublist');
   const body = document.body;
 
   navMain.classList.remove('header__nav--nojs');
@@ -52,7 +52,7 @@ function burgerMenuInit() {
         event.preventDefault();
         const listItem = link.closest('.header__nav-item');
         if (listItem) {
-          const sublist = listItem.querySelector('.header__nav-sublist--closed');
+          const sublist = listItem.querySelector('.header__nav-sublist');
           if (sublist) {
             sublist.classList.toggle('header__nav-sublist--opened');
           }

@@ -46,14 +46,20 @@
   position: absolute;
   top: 88px;
   right: 0;
+  max-height: 0;
+  overflow-y: auto;
+  transition: max-height 0.7s ease-in-out;
+}
+
+.header__nav--opened {
+  max-height: 900px;
 }
 
 .header__nav-list {
   margin: 0;
-  padding: 0;
   display: none;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
   width: 286px;
   min-height: fit-content;
   list-style: none;
@@ -75,6 +81,7 @@
     color: rgba(255, 255, 255, 0.7);
     display: flex;
     width: fit-content;
+    letter-spacing: -0.5px;
 
     &:hover {
       @include hover;
@@ -117,15 +124,15 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-.header__nav-sublist--closed {
+.header__nav-sublist {
   display: none;
   margin: 0;
-  margin-top: 20px;
+  margin-top: 15px;
   padding: 0;
   list-style: none;
   padding-left: 16px;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   order: 2;
 
   & li {
@@ -149,9 +156,9 @@
   width: 134px;
   min-height: 54px;
   border-radius: 30px;
-  border-color: #316dc2;
+  border: 1px solid #316dc2;
   background-color: $color-default-white;
-  padding: 0 70px 0 20px;
+  padding: 5px 70px 5px 20px;
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
@@ -161,17 +168,35 @@
 
   &:hover {
     @include hover;
-    border: 2px solid #316dc2;
+    background-color: #316dc2;
+    color: $color-default-white;
   }
 
-  &:not(:disabled):focus {
+  &:hover::after {
+    @include hover;
+    background-color: $color-default-white;
+    background-image: url("../../img/svg/burger-blue.svg");
+  }
+
+  &:focus {
     @include focus;
-    border: 2px solid #316dc2;
+    background-color: #316dc2;
+    color: $color-default-white;
+  }
+
+  &:focus::after {
+    @include hover;
+    background-color: $color-default-white;
+    background-image: url("../../img/svg/burger-blue.svg");
   }
 
   &:active {
     @include active;
-    border: 2px solid #052756;
+    opacity: 70%;
+  }
+
+  &:focus-visible {
+    outline: none;
   }
 
   &::after {
@@ -188,6 +213,7 @@
     background-repeat: no-repeat;
     background-size: 20px 10px;
     background-position: center;
+    color: $color-default-white;
   }
 
   & span {
@@ -218,10 +244,35 @@
   cursor: pointer;
   text-align: start;
   border: none;
+  margin-top: 10px;
 
-  &:not(:disabled):focus {
+  &:hover {
+    @include hover;
+    color: #316dc2;
+    background-color: $color-default-white;
+  }
+
+  &:hover::after {
+    @include hover;
+    background-color: #316dc2;
+    background-image: url("../../img/svg/burger-close-white.svg");
+  }
+
+  &:focus {
     @include focus;
-    border: none;
+    color: #316dc2;
+    background-color: $color-default-white;
+  }
+
+  &:focus::after {
+    @include focus;
+    background-color: #316dc2;
+    background-image: url("../../img/svg/burger-close-white.svg");
+  }
+
+  &:active {
+    @include active;
+    opacity: 70%;
   }
 
   &::after {
@@ -242,10 +293,6 @@
 }
 
 .header__nav--opened ~ .header__logo {
-  margin-top: 10px;
-}
-
-.header__nav--opened ~ .header__button {
   margin-top: 10px;
 }
 
@@ -270,6 +317,10 @@
     padding: 31px 30px 0;
   }
 
+  .header__nav {
+    right: 30px;
+  }
+
   .header__nav--opened ~ .header__logo {
     margin-top: 0;
   }
@@ -286,6 +337,7 @@
 
   .header__nav {
     top: 78px;
+    right: 0;
   }
 
   .header__nav--opened ~ .header__button {
@@ -300,7 +352,7 @@
     width: 100%;
   }
 
-  .header__nav--opened .header__nav-list{
+  .header__nav--opened .header__nav-list {
     width: 100%;
   }
 }

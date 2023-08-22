@@ -2,7 +2,7 @@
   min-height: 54px;
   border: 1px solid #316dc2;
   border-radius: 30px;
-  padding: 0 75px 0 25px;
+  padding: 10px 75px 10px 25px;
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -11,7 +11,7 @@
   color: #316dc2;
   text-transform: uppercase;
   position: relative;
-  letter-spacing: 0.28px;
+  letter-spacing: -0.3px;
   background-color: transparent;
   cursor: pointer;
 
@@ -54,6 +54,10 @@
     @include focus;
     background-color: #316dc2;
     color: $color-default-white;
+  }
+
+  &:focus-visible {
+    outline: none;
   }
 
   &:not(:disabled):focus::after {

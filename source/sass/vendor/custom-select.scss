@@ -17,7 +17,7 @@
 
     transform: translateY(-50%);
 
-    transition: transform 0.3s ease, opacity  0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 
     pointer-events: none;
 
@@ -120,7 +120,7 @@
 
     &[aria-selected="true"] {
       color: #ffffff;
-      background-color: #316DC2;
+      background-color: #316dc2;
 
       @media (hover: hover) {
         &:hover:not(.focus-visible) {

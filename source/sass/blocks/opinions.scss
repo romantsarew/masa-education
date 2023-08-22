@@ -1,8 +1,7 @@
 .opinions {
-  padding: 60px 0 120px;
+  padding: 60px 0 131px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
 
   & h2 {
     max-width: 1270px;
@@ -15,6 +14,8 @@
     align-self: center;
     padding: 0 15px;
     margin: 0;
+    letter-spacing: -1.5px;
+    margin-bottom: 42px;
   }
 }
 
@@ -23,13 +24,14 @@
   margin: 0 auto;
   padding: 0 15px;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .opinions__slide {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   flex-direction: column;
-  padding: 50px;
+  padding: 50px 50px 40px;
   border: 1px solid #316dc2;
   border-radius: 16px;
   min-height: 430px;
@@ -66,14 +68,15 @@
 
 .opinions__slide-terms {
   display: flex;
-  gap: 25px;
+  gap: 27px;
   flex-wrap: wrap;
+  max-width: 50%;
 
   & dl {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    max-width: 300px;
+    max-width: 130px;
     margin: 0;
 
     & dt {
@@ -81,12 +84,14 @@
       line-height: 12px;
       color: #316dc2;
       text-transform: uppercase;
+      letter-spacing: -0.5px;
     }
 
     & dd {
       font-size: 14px;
       line-height: 14px;
       margin: 0;
+      letter-spacing: -0.5px;
     }
   }
 }
@@ -94,17 +99,19 @@
 .opinions__slide-text {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
 
   & h3 {
     font-size: 24px;
     font-weight: 400;
     color: #316dc2;
     margin: 0;
+    letter-spacing: -0.7px;
   }
 
   & p {
     margin: 0;
+    letter-spacing: -0.5px;
   }
 }
 
@@ -149,8 +156,7 @@
 .opinions__buttons {
   position: absolute;
   display: flex;
-  gap: 16px;
-  background-color: transparent;
+  gap: 10px;
   z-index: 2;
   right: 15px;
   top: 50%;
@@ -193,6 +199,10 @@
     background-color: $color-default-white;
   }
 
+  &:focus-visible {
+    outline: none;
+  }
+
   &:active {
     @include active;
     background-color: $color-default-white;
@@ -215,13 +225,14 @@
 
 @media (max-width: $tablet-width) {
   .opinions {
-    padding: 50px 0 100px;
+    padding: 53px 0 110px;
 
     & h2 {
       max-width: 100%;
       width: 100%;
       font-size: 34px;
       padding: 0 45px;
+      letter-spacing: -1.2px;
     }
   }
 
@@ -230,24 +241,57 @@
     margin: 0;
     padding: 0;
     padding-left: 45px;
+    margin-bottom: 48px;
   }
 
   .opinions__slide {
     min-height: 395px;
     max-width: 560px;
+    gap: 23px;
   }
 
   .opinions__slide-data {
     & span {
       font-size: 20px;
       line-height: 24px;
+      letter-spacing: -0.6px;
+      padding-left: 104px;
+    }
+  }
+
+  .opinions__slide-terms {
+    display: flex;
+    gap: 28px;
+    flex-wrap: nowrap;
+    max-width: 50%;
+
+    & dl {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-width: 140px;
+      margin: 0;
+
+      & dt {
+        font-size: 12px;
+        line-height: 12px;
+        color: #316dc2;
+        text-transform: uppercase;
+      }
+
+      & dd {
+        font-size: 14px;
+        line-height: 14px;
+        margin: 0;
+      }
     }
   }
 
   .opinions__slide-text {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
+    max-width: 100%;
 
     & h3 {
       font-size: 20px;
@@ -271,12 +315,15 @@
 @media (max-width: $mobile-width) {
   .opinions {
     position: relative;
-    padding: 34px 15px 67px;
+    padding: 34px 15px 18px;
 
     & h2 {
       font-size: 20px;
       line-height: 20px;
       padding: 0;
+      max-width: 80%;
+      align-self: flex-start;
+      margin-bottom: 33px;
     }
   }
 
@@ -285,7 +332,7 @@
   }
 
   .opinions__slide {
-    padding: 30px 15px;
+    padding: 42px 15px 25px;
     min-height: 435px;
     max-width: 100%;
   }
@@ -301,6 +348,7 @@
       font-size: 14px;
       line-height: 18px;
       padding-left: 70px;
+      max-width: 60%;
 
       &::before {
         width: 60px;
@@ -311,10 +359,12 @@
   }
 
   .opinions__slide-terms {
-    width: 100%;
+    max-width: 100%;
+    gap: 29px;
 
     & dl {
-      max-width: 150px;
+      max-width: 55%;
+      gap: 7px;
 
       & dd {
         font-size: 12px;
@@ -323,7 +373,8 @@
   }
 
   .opinions__slide-text {
-    gap: 20px;
+    gap: 15px;
+    max-width: 100%;
 
     & h3 {
       font-size: 16px;
@@ -349,5 +400,6 @@
     background-color: transparent;
     top: 33px;
     transform: none;
+    gap: 8px;
   }
 }

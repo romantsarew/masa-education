@@ -3,7 +3,7 @@
 }
 
 .conditions__container {
-  padding: 120px 0 107px;
+  padding: 126px 0 107px;
   max-width: 1240px;
   margin: 0 auto;
   display: flex;
@@ -13,7 +13,7 @@
 .conditions__travel {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 28px;
   max-width: 498px;
 
   & h2 {
@@ -23,12 +23,15 @@
     font-weight: 400;
     color: $color-default-white;
     width: 100%;
+    letter-spacing: -2px;
   }
 
   & p {
     margin: 0;
     color: $color-default-white;
     font-weight: 400;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
   }
 
   & div {
@@ -49,7 +52,7 @@
 .conditions__grant {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 55px;
   max-width: 498px;
   margin-right: auto;
 
@@ -59,6 +62,8 @@
     font-weight: 400;
     color: $color-default-white;
     margin: 0;
+    letter-spacing: -1px;
+    padding-top: 2px;
   }
 
   & ul {
@@ -87,7 +92,7 @@
     width: 42px;
     height: 42px;
     background-color: #316dc2;
-    top: -21px;
+    top: -15px;
     left: -21px;
     display: flex;
     justify-content: center;
@@ -101,6 +106,7 @@
   & span {
     font-weight: 400;
     color: $color-default-white;
+    letter-spacing: -0.5px;
   }
 }
 
@@ -122,23 +128,25 @@
 
 @media (max-width: $tablet-width) {
   .conditions__container {
-    padding: 112px 30px 100px;
+    padding: 100px 30px 100px;
     max-width: 100%;
     flex-direction: column;
-    gap: 40px;
+    gap: 45px;
   }
 
   .conditions__travel {
-    gap: 40px;
+    gap: 25px;
     max-width: 100%;
 
     & h2 {
       font-size: 34px;
+      letter-spacing: -1.3px;
     }
 
     & p {
       line-height: 20px;
       max-width: 498px;
+      margin-bottom: 11px;
     }
 
     & div {
@@ -147,13 +155,14 @@
   }
 
   .conditions__grant {
-    gap: 35px;
+    gap: 42px;
     max-width: 100%;
     margin-right: 0;
 
     & h3 {
       font-size: 28px;
       line-height: 28px;
+      letter-spacing: -0.8px;
     }
 
     & ul {
@@ -177,16 +186,17 @@
 
 @media (max-width: $mobile-width) {
   .conditions__container {
-    padding: 67px 0;
-    gap: 30px;
+    padding: 67px 0 70px;
+    gap: 32px;
   }
 
   .conditions__travel {
-    gap: 20px;
+    gap: 15px;
 
     & h2 {
       font-size: 20px;
       line-height: 20px;
+      letter-spacing: -0.8px;
     }
 
     & p {

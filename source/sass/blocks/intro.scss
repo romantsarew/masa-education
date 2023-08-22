@@ -8,6 +8,8 @@
   background-size: cover;
   padding: 0 15px;
   height: auto;
+  background-color: #ffffc3;
+  min-height: 800px;
 
   &::before {
     position: absolute;
@@ -23,7 +25,7 @@
 
 .intro__slide-container {
   position: relative;
-  padding: 473px 0 60px;
+  padding: 417px 0 0;
   min-height: 800px;
   max-width: 1240px;
   margin: 0 auto;
@@ -50,7 +52,7 @@
   position: relative;
   width: fit-content;
   background-color: $color-default-white;
-  border-radius: 20px 20px 0px 0;
+  border-radius: 20px 20px 0 0;
   padding: 14px 20px;
   line-height: 10px;
   display: flex;
@@ -70,8 +72,7 @@
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0;
 }
 
@@ -100,6 +101,10 @@
     border-color: #316dc2;
   }
 
+  &:focus-visible {
+    outline: none;
+  }
+
   &:disabled {
     opacity: 10%;
     cursor: default;
@@ -112,7 +117,7 @@
 }
 
 .intro__slide-top {
-  padding: 40px 46px 30px;
+  padding: 42px 50px 28px;
   background-color: $color-default-white;
   border-radius: 0 30px 30px 0;
   margin-top: -10px;
@@ -123,18 +128,20 @@
     font-size: 54px;
     line-height: 62px;
     color: #316dc2;
+    letter-spacing: -1.75px;
   }
 }
 
 .intro__slide-bottom {
   position: relative;
-  padding: 0 46px 35px;
+  padding: 0 50px 28px;
   background-color: $color-default-white;
   max-width: 772px;
   display: flex;
   border-radius: 0 0 30px 30px;
   justify-content: space-between;
   align-items: center;
+  margin-top: -5px;
 
   &::after {
     position: absolute;
@@ -152,8 +159,14 @@
   & p {
     margin: 0;
     font-weight: 400;
-    max-width: 470px;
+    max-width: 450px;
+    letter-spacing: -0.5px;
   }
+}
+
+.intro__link {
+  min-width: 196px;
+  padding-left: 28px;
 }
 
 @media (max-width: $tablet-width) {
@@ -166,28 +179,34 @@
   }
 
   .intro__slide-container {
-    padding: 709px 0 60px 0;
+    padding: 685px 0 35px 0;
     min-height: 1024px;
     max-width: 659px;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .intro__slide-top {
-    padding: 30px 40px 24px;
+    padding: 32px 40px 24px;
 
     & p {
       font-size: 36px;
       line-height: 44px;
+      letter-spacing: -1.1px;
     }
   }
 
   .intro__slide-bottom {
-    padding: 0 40px 36px;
+    padding: 0 40px 31px;
     max-width: 591px;
+    align-items: flex-start;
 
     & p {
       line-height: 20px;
       max-width: 290px;
+    }
+
+    & div {
+      padding-top: 3px;
     }
   }
 }
@@ -198,14 +217,15 @@
   }
 
   .intro__slide {
+    min-height: 568px;
     padding: 0 15px;
   }
 
   .intro__slide-container {
-    padding: 269px 0 20px;
-    min-height: 100%;
+    padding: 243px 0 20px;
+    min-height: 568px;
     max-width: 290px;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .swiper .intro__slide-pagination {
@@ -227,12 +247,13 @@
   }
 
   .intro__slide-top {
-    padding: 20px 15px 16px;
+    padding: 20px 30px 16px 15px;
     border-radius: 0 16px 16px 0;
 
     & p {
       font-size: 22px;
       line-height: 26px;
+      letter-spacing: -0.6px;
     }
   }
 
@@ -253,7 +274,7 @@
     & p {
       font-size: 14px;
       max-width: 261px;
-      padding: 0 14px 15px;
+      padding: 0 14px 10px;
       background-color: $color-default-white;
       border-radius: 0 0 14px 0;
     }
@@ -271,7 +292,6 @@
         width: 10px;
         height: 10px;
         background-size: 10px 10px;
-        right: -10px;
         background-image: url("../../img/svg/pagination-angle.svg");
         transform: rotate(90deg);
         top: 0;
@@ -282,10 +302,11 @@
 
   .intro__link {
     min-height: 42px;
-    padding: 0 53px 0 15px;
+    padding: 0 53px 0 20px;
     font-size: 12px;
     line-height: 12px;
     max-width: 100%;
+    min-width: 100%;
 
     &::after {
       width: 34px;
