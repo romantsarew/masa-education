@@ -14,9 +14,9 @@ function swiperIntroInit() {
       cssMode: true,
       direction: 'horizontal',
       loop: true,
-      // autoplay: {
-      //   delay: 3000,
-      // },
+      autoplay: {
+        delay: 3000,
+      },
 
       pagination: {
         el: '.intro__slide-pagination',
