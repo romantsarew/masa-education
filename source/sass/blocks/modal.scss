@@ -144,9 +144,19 @@
     width: 100%;
     letter-spacing: -0.5px;
   }
+}
 
-  &__form {
-    width: 100%;
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  & .custom-select {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
   }
 }
 
