@@ -175,7 +175,7 @@
   &:hover::after {
     @include hover;
     background-color: $color-default-white;
-    background-image: url("../../img/svg/burger-blue.svg");
+    background-image: url("../img/svg/burger-blue.svg");
   }
 
   &:focus {
@@ -187,7 +187,7 @@
   &:focus::after {
     @include hover;
     background-color: $color-default-white;
-    background-image: url("../../img/svg/burger-blue.svg");
+    background-image: url("../img/svg/burger-blue.svg");
   }
 
   &:active {
@@ -255,7 +255,7 @@
   &:hover::after {
     @include hover;
     background-color: #316dc2;
-    background-image: url("../../img/svg/burger-close-white.svg");
+    background-image: url("../img/svg/burger-close-white.svg");
   }
 
   &:focus {
@@ -267,7 +267,7 @@
   &:focus::after {
     @include focus;
     background-color: #316dc2;
-    background-image: url("../../img/svg/burger-close-white.svg");
+    background-image: url("../img/svg/burger-close-white.svg");
   }
 
   &:active {

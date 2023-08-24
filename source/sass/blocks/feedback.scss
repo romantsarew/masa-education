@@ -74,13 +74,22 @@
 }
 
 .feedback__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  & .custom-select {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    color: $color-default-white;
+  }
+
   & .form__select-label {
     color: rgba(240, 239, 233, 0.8);
     margin-bottom: 0;
-  }
-
-  & .form__select-text {
-    color: $color-default-white;
   }
 
   & .form__select-icon {
@@ -143,7 +152,7 @@
 }
 
 .feedback__check input[type="checkbox"]:checked:disabled + .feedback__sort::before {
-  background-image: url("../../img/svg/check.svg");
+  background-image: url("../img/svg/check.svg");
 }
 
 .feedback__check input[type="checkbox"]:checked + .feedback__sort {
@@ -158,11 +167,11 @@
 
 .feedback__check:hover input[type="checkbox"]:not(:disabled):checked + .feedback__sort::before,
 .feedback__check:focus input[type="checkbox"]:not(:disabled):checked + .feedback__sort::before {
-  background-image: url("../../img/svg/check.svg");
+  background-image: url("../img/svg/check.svg");
 }
 
 .feedback__check input[type="checkbox"]:checked + .feedback__sort::before {
-  background-image: url("../../img/svg/check-blue.svg");
+  background-image: url("../img/svg/check-blue.svg");
 }
 
 .feedback__name {
@@ -210,7 +219,8 @@
   border-color: $color-default-white;
   justify-content: center;
   color: $color-default-white;
-  padding-top: 15px;
+  padding-top: 12px;
+  width: 100%;
 
   &:not(:disabled):hover,
   &:not(:disabled):focus {
@@ -247,9 +257,12 @@
 
   &::after {
     background-color: $color-default-white;
+    top: 3px;
   }
 
   & svg {
+    top: 50%;
+    transform: translate(0, -50%);
     color: #316dc2;
   }
 }
@@ -344,7 +357,13 @@
   }
 
   .feedback__form form {
-    gap: 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & input {
+      min-height: 50px;
+    }
   }
 
   .feedback__form-container {
@@ -395,7 +414,7 @@
   }
 
   .feedback__check {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 
   .feedback__check label {

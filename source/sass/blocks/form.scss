@@ -1,4 +1,4 @@
-form {
+.modal__form {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -156,7 +156,7 @@ form {
       content: "";
       width: 10px;
       height: 10px;
-      background-image: url("../../img/svg/check.svg");
+      background-image: url("../img/svg/check.svg");
       background-repeat: no-repeat;
       top: 6px;
       left: 5px;
@@ -198,7 +198,7 @@ form {
 }
 
 .form__check input[type="checkbox"]:checked:disabled + .form__sort::before {
-  background-image: url("../../img/svg/check.svg");
+  background-image: url("../img/svg/check.svg");
 }
 
 .form__check input[type="checkbox"]:checked + .form__sort {
@@ -213,7 +213,7 @@ form {
 
 .form__check:hover input[type="checkbox"]:not(:disabled):checked + .form__sort::before,
 .form__check:focus input[type="checkbox"]:not(:disabled):checked + .form__sort::before {
-  background-image: url("../../img/svg/check-blue.svg");
+  background-image: url("../img/svg/check-blue.svg");
 }
 
 .form__sort {
