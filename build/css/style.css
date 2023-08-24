@@ -2832,7 +2832,27 @@ button,
 }
 
 .modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
+}
+
+.modal__form .custom-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
 }
 
 .header {
@@ -3600,30 +3620,6 @@ button,
 .intro__link {
   min-width: 196px;
   padding-left: 28px;
-}
-
-.modal__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-}
-
-.modal__form .custom-select {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 8px;
-  padding: 0;
-  margin: 0;
 }
 
 .form .form__select {
@@ -5400,11 +5396,11 @@ button,
 }
 
 .opinions__slide--sarah span::before {
-  background-image: url("../img/sarah.png");
+  background-image: url("../img/sarah.webp");
 }
 
 .opinions__slide--david span::before {
-  background-image: url("../img/david.png");
+  background-image: url("../img/david.webp");
 }
 
 .opinions__control {
