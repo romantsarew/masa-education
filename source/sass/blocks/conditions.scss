@@ -66,7 +66,8 @@
     padding-top: 2px;
   }
 
-  & ul {
+  & ol {
+    counter-reset: li;
     display: flex;
     flex-direction: column;
     gap: 23px;
@@ -88,7 +89,8 @@
 
   &::before {
     position: absolute;
-    content: "";
+    content: counter(li);
+    counter-increment: li;
     width: 42px;
     height: 42px;
     background-color: #316dc2;
@@ -108,22 +110,6 @@
     color: $color-default-white;
     letter-spacing: -0.5px;
   }
-}
-
-.conditions__rule--first::before {
-  content: "1";
-}
-
-.conditions__rule--second::before {
-  content: "2";
-}
-
-.conditions__rule--third::before {
-  content: "3";
-}
-
-.conditions__rule--fourth::before {
-  content: "4";
 }
 
 @media (max-width: $tablet-width) {
@@ -165,7 +151,7 @@
       letter-spacing: -0.8px;
     }
 
-    & ul {
+    & ol {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 48px;
@@ -221,7 +207,7 @@
       line-height: 22px;
     }
 
-    & ul {
+    & ol {
       display: flex;
       flex-direction: column;
       gap: 15px;

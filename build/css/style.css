@@ -2196,21 +2196,21 @@ svg.leaflet-image-layer.leaflet-interactive path {
   font-weight: 300;
   font-family: "Manrope";
   font-display: swap;
-  src: url("../../fonts/Manrope-Light.woff2") format("woff2"), url("../../fonts/Manrope-Light.woff") format("woff");
+  src: url("../fonts/Manrope-Light.woff2") format("woff2"), url("../fonts/Manrope-Light.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 400;
   font-family: "Manrope";
   font-display: swap;
-  src: url("../../fonts/Manrope-Regular.woff2") format("woff2"), url("../../fonts/Manrope-Regular.woff") format("woff");
+  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 500;
   font-family: "Manrope";
   font-display: swap;
-  src: url("../../fonts/Manrope-Medium.woff2") format("woff2"), url("../../fonts/Manrope-Medium.woff") format("woff");
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
 }
 *,
 *::before,
@@ -2962,7 +2962,7 @@ button,
 }
 .header__button:hover::after {
   background-color: #ffffff;
-  background-image: url("../../img/svg/burger-blue.svg");
+  background-image: url("../img/svg/burger-blue.svg");
 }
 .header__button:focus {
   background-color: #316dc2;
@@ -2970,7 +2970,7 @@ button,
 }
 .header__button:focus::after {
   background-color: #ffffff;
-  background-image: url("../../img/svg/burger-blue.svg");
+  background-image: url("../img/svg/burger-blue.svg");
 }
 .header__button:active {
   opacity: 70%;
@@ -3033,7 +3033,7 @@ button,
 }
 .header__nav--opened ~ .header__button:hover::after {
   background-color: #316dc2;
-  background-image: url("../../img/svg/burger-close-white.svg");
+  background-image: url("../img/svg/burger-close-white.svg");
 }
 .header__nav--opened ~ .header__button:focus {
   color: #316dc2;
@@ -3041,7 +3041,7 @@ button,
 }
 .header__nav--opened ~ .header__button:focus::after {
   background-color: #316dc2;
-  background-image: url("../../img/svg/burger-close-white.svg");
+  background-image: url("../img/svg/burger-close-white.svg");
 }
 .header__nav--opened ~ .header__button:active {
   opacity: 70%;
@@ -3431,10 +3431,11 @@ button,
   }
   .footer__nav {
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    letter-spacing: -0.5px;
   }
   .footer__nav ul {
     -webkit-box-pack: center;
@@ -3536,17 +3537,17 @@ button,
 }
 
 .intro__slide--internship {
-  background-image: url("../../img/intro/internship.webp");
+  background-image: url("../img/intro/internship.webp");
   background-position: center;
 }
 
 .intro__slide--volunteering {
-  background-image: url("../../img/intro/volunteering.webp");
+  background-image: url("../img/intro/volunteering.webp");
   background-position: center;
 }
 
 .intro__slide--experience {
-  background-image: url("../../img/intro/experience.webp");
+  background-image: url("../img/intro/experience.webp");
   background-position: center;
 }
 
@@ -3572,7 +3573,7 @@ button,
   content: "";
   width: 20px;
   height: 20px;
-  background-image: url("../../img/svg/pagination-angle.svg");
+  background-image: url("../img/svg/pagination-angle.svg");
   bottom: 0;
   right: -20px;
 }
@@ -3651,7 +3652,7 @@ button,
   content: "";
   width: 26px;
   height: 26px;
-  background-image: url("../../img/svg/pagination-angle.svg");
+  background-image: url("../img/svg/pagination-angle.svg");
   background-repeat: no-repeat;
   background-size: 26px 26px;
   top: 0;
@@ -3784,7 +3785,7 @@ button,
     width: 10px;
     height: 10px;
     background-size: 10px 10px;
-    background-image: url("../../img/svg/pagination-angle.svg");
+    background-image: url("../img/svg/pagination-angle.svg");
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
@@ -3809,7 +3810,7 @@ button,
     right: 16px;
   }
 }
-form {
+.modal__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3819,7 +3820,7 @@ form {
           flex-direction: column;
   width: 100%;
 }
-form .custom-select {
+.modal__form .custom-select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3977,7 +3978,7 @@ form .custom-select {
   content: "";
   width: 10px;
   height: 10px;
-  background-image: url("../../img/svg/check.svg");
+  background-image: url("../img/svg/check.svg");
   background-repeat: no-repeat;
   top: 6px;
   left: 5px;
@@ -4017,7 +4018,7 @@ form .custom-select {
 }
 
 .form__check input[type=checkbox]:checked:disabled + .form__sort::before {
-  background-image: url("../../img/svg/check.svg");
+  background-image: url("../img/svg/check.svg");
 }
 
 .form__check input[type=checkbox]:checked + .form__sort {
@@ -4032,7 +4033,7 @@ form .custom-select {
 
 .form__check:hover input[type=checkbox]:not(:disabled):checked + .form__sort::before,
 .form__check:focus input[type=checkbox]:not(:disabled):checked + .form__sort::before {
-  background-image: url("../../img/svg/check-blue.svg");
+  background-image: url("../img/svg/check-blue.svg");
 }
 
 .form__sort {
@@ -4263,7 +4264,7 @@ form .custom-select {
   width: 42px;
   height: 42px;
   background-color: #316dc2;
-  background-image: url("../../img/svg/star.svg");
+  background-image: url("../img/svg/star.svg");
   background-size: 18px 22px;
   background-repeat: no-repeat;
   background-position: center;
@@ -4631,15 +4632,15 @@ form .custom-select {
 }
 
 .programs__slide--internship {
-  background-image: url("../../img/programs/internship.jpg");
+  background-image: url("../img/programs/internship.webp");
 }
 
 .programs__slide--volunteering {
-  background-image: url("../../img/programs/volunteering.jpg");
+  background-image: url("../img/programs/volunteering.webp");
 }
 
 .programs__slide--education {
-  background-image: url("../../img/programs/education.jpg");
+  background-image: url("../img/programs/education.webp");
 }
 
 .programs__text {
@@ -4676,7 +4677,7 @@ form .custom-select {
   content: "";
   width: 18px;
   height: 18px;
-  background-image: url("../../img/svg/pagination-angle.svg");
+  background-image: url("../img/svg/pagination-angle.svg");
   right: -18px;
   bottom: 0;
 }
@@ -4982,7 +4983,8 @@ form .custom-select {
   letter-spacing: -1px;
   padding-top: 2px;
 }
-.conditions__grant ul {
+.conditions__grant ol {
+  counter-reset: li;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5012,7 +5014,8 @@ form .custom-select {
 }
 .conditions__rule::before {
   position: absolute;
-  content: "";
+  content: counter(li);
+  counter-increment: li;
   width: 42px;
   height: 42px;
   background-color: #316dc2;
@@ -5036,22 +5039,6 @@ form .custom-select {
   font-weight: 400;
   color: #ffffff;
   letter-spacing: -0.5px;
-}
-
-.conditions__rule--first::before {
-  content: "1";
-}
-
-.conditions__rule--second::before {
-  content: "2";
-}
-
-.conditions__rule--third::before {
-  content: "3";
-}
-
-.conditions__rule--fourth::before {
-  content: "4";
 }
 
 @media (max-width: 1199px) {
@@ -5090,7 +5077,7 @@ form .custom-select {
     line-height: 28px;
     letter-spacing: -0.8px;
   }
-  .conditions__grant ul {
+  .conditions__grant ol {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
@@ -5141,7 +5128,7 @@ form .custom-select {
     font-size: 18px;
     line-height: 22px;
   }
-  .conditions__grant ul {
+  .conditions__grant ol {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5330,20 +5317,20 @@ form .custom-select {
 }
 
 .news__slide--internship {
-  background-image: url("../../img/news/internship-huge.jpg");
+  background-image: url("../img/news/internship-huge.webp");
   background-position: center;
 }
 
 .news__slide--travel {
-  background-image: url("../../img/news/traveling.jpg");
+  background-image: url("../img/news/traveling.webp");
 }
 
 .news__slide--volunteering {
-  background-image: url("../../img/news/volunteering.jpg");
+  background-image: url("../img/news/volunteering.webp");
 }
 
 .news__slide--career {
-  background-image: url("../../img/news/career.jpg");
+  background-image: url("../img/news/career.webp");
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
@@ -5370,7 +5357,7 @@ form .custom-select {
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url("../../img/svg/pagination-angle-biege.svg");
+  background-image: url("../img/svg/pagination-angle-biege.svg");
   background-size: 16px 16px;
   left: 0;
   top: -16px;
@@ -5380,7 +5367,7 @@ form .custom-select {
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url("../../img/svg/pagination-angle-biege.svg");
+  background-image: url("../img/svg/pagination-angle-biege.svg");
   background-size: 16px 16px;
   right: -16px;
   bottom: 0;
@@ -5405,7 +5392,7 @@ form .custom-select {
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url("../../img/svg/pagination-angle-biege.svg");
+  background-image: url("../img/svg/pagination-angle-biege.svg");
   background-size: 16px 16px;
   right: -16px;
   bottom: 0;
@@ -5430,7 +5417,7 @@ form .custom-select {
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url("../../img/svg/pagination-angle-biege.svg");
+  background-image: url("../img/svg/pagination-angle-biege.svg");
   background-size: 16px 16px;
   right: -16px;
   bottom: 0;
@@ -6313,11 +6300,11 @@ form .custom-select {
 }
 
 .opinions__slide--sarah span::before {
-  background-image: url("../../img/sarah.png");
+  background-image: url("../img/sarah.png");
 }
 
 .opinions__slide--david span::before {
-  background-image: url("../../img/david.png");
+  background-image: url("../img/david.png");
 }
 
 .opinions__control {
@@ -6900,12 +6887,32 @@ form .custom-select {
   margin-bottom: 19px;
 }
 
+.feedback__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+.feedback__form .custom-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
 .feedback__form .form__select-label {
   color: rgba(240, 239, 233, 0.8);
   margin-bottom: 0;
-}
-.feedback__form .form__select-text {
-  color: #ffffff;
 }
 .feedback__form .form__select-icon {
   background-color: #ffffff;
@@ -6961,7 +6968,7 @@ form .custom-select {
 }
 
 .feedback__check input[type=checkbox]:checked:disabled + .feedback__sort::before {
-  background-image: url("../../img/svg/check.svg");
+  background-image: url("../img/svg/check.svg");
 }
 
 .feedback__check input[type=checkbox]:checked + .feedback__sort {
@@ -6976,11 +6983,11 @@ form .custom-select {
 
 .feedback__check:hover input[type=checkbox]:not(:disabled):checked + .feedback__sort::before,
 .feedback__check:focus input[type=checkbox]:not(:disabled):checked + .feedback__sort::before {
-  background-image: url("../../img/svg/check.svg");
+  background-image: url("../img/svg/check.svg");
 }
 
 .feedback__check input[type=checkbox]:checked + .feedback__sort::before {
-  background-image: url("../../img/svg/check-blue.svg");
+  background-image: url("../img/svg/check-blue.svg");
 }
 
 .feedback__name {
@@ -7031,7 +7038,8 @@ form .custom-select {
       -ms-flex-pack: center;
           justify-content: center;
   color: #ffffff;
-  padding-top: 15px;
+  padding-top: 12px;
+  width: 100%;
 }
 .feedback__button:not(:disabled):hover, .feedback__button:not(:disabled):focus {
   background-color: #ffffff;
@@ -7058,8 +7066,13 @@ form .custom-select {
 }
 .feedback__button::after {
   background-color: #ffffff;
+  top: 3px;
 }
 .feedback__button svg {
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   color: #316dc2;
 }
 
@@ -7143,7 +7156,17 @@ form .custom-select {
     min-height: 753px;
   }
   .feedback__form form {
-    gap: 23px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  .feedback__form form input {
+    min-height: 50px;
   }
   .feedback__form-container {
     max-width: 100%;
@@ -7185,7 +7208,7 @@ form .custom-select {
     padding-right: 20px;
   }
   .feedback__check {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
   .feedback__check label {
     margin-bottom: 0;

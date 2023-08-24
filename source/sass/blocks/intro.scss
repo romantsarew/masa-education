@@ -34,17 +34,17 @@
 }
 
 .intro__slide--internship {
-  background-image: url("../../img/intro/internship.webp");
+  background-image: url("../img/intro/internship.webp");
   background-position: center;
 }
 
 .intro__slide--volunteering {
-  background-image: url("../../img/intro/volunteering.webp");
+  background-image: url("../img/intro/volunteering.webp");
   background-position: center;
 }
 
 .intro__slide--experience {
-  background-image: url("../../img/intro/experience.webp");
+  background-image: url("../img/intro/experience.webp");
   background-position: center;
 }
 
@@ -65,7 +65,7 @@
     content: "";
     width: 20px;
     height: 20px;
-    background-image: url("../../img/svg/pagination-angle.svg");
+    background-image: url("../img/svg/pagination-angle.svg");
     bottom: 0;
     right: -20px;
   }
@@ -148,7 +148,7 @@
     content: "";
     width: 26px;
     height: 26px;
-    background-image: url("../../img/svg/pagination-angle.svg");
+    background-image: url("../img/svg/pagination-angle.svg");
     background-repeat: no-repeat;
     background-size: 26px 26px;
     top: 0;
@@ -292,7 +292,7 @@
         width: 10px;
         height: 10px;
         background-size: 10px 10px;
-        background-image: url("../../img/svg/pagination-angle.svg");
+        background-image: url("../img/svg/pagination-angle.svg");
         transform: rotate(90deg);
         top: 0;
         right: -10px;
