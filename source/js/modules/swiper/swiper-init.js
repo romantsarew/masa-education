@@ -56,6 +56,9 @@ function swiperProgramsInit() {
         },
         // when window width is >= 320px
         320: {
+          scrollbar: {
+            enabled: false,
+          },
           slidesPerView: 1,
           spaceBetween: 0,
           initialSlide: 0,
@@ -187,6 +190,9 @@ function swiperOpinionsInit() {
         },
         // when window width is >= 320px
         320: {
+          scrollbar: {
+            enabled: false,
+          },
           slidesPerView: 1,
           spaceBetween: 10,
           initialSlide: 0,

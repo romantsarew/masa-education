@@ -172,7 +172,7 @@
 
 @media (max-width: $mobile-width) {
   .conditions__container {
-    padding: 67px 0 70px;
+    padding: 67px 0 67px;
     gap: 32px;
   }
 
@@ -205,12 +205,13 @@
     & h3 {
       font-size: 18px;
       line-height: 22px;
+      letter-spacing: -0.5px;
     }
 
     & ol {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 16px;
       padding-left: 15px;
     }
   }

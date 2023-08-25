@@ -150,14 +150,26 @@
 
 .programs__slide--internship {
   background-image: url("../img/programs/internship.webp");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/programs/internship@2x.webp");
+  }
 }
 
 .programs__slide--volunteering {
   background-image: url("../img/programs/volunteering.webp");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/programs/volunteering@2x.webp");
+  }
 }
 
 .programs__slide--education {
   background-image: url("../img/programs/education.webp");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/programs/education@2x.webp");
+  }
 }
 
 .programs__text {
@@ -175,7 +187,7 @@
     margin: 0;
     width: fit-content;
     text-align: start;
-    padding: 10px 12px 2px 18px;
+    padding: 12px 12px 0 18px;
     font-size: 24px;
     line-height: 26px;
     color: #316dc2;
