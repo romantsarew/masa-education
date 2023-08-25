@@ -143,19 +143,35 @@
 .news__slide--internship {
   background-image: url("../img/news/internship-huge.webp");
   background-position: center;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/news/internship-huge@2x.webp");
+  }
 }
 
 .news__slide--travel {
   background-image: url("../img/news/traveling.webp");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/news/traveling@2x.webp");
+  }
 }
 
 .news__slide--volunteering {
   background-image: url("../img/news/volunteering.webp");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/news/volunteering@2x.webp");
+  }
 }
 
 .news__slide--career {
   background-image: url("../img/news/career.webp");
   order: 4;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/news/career@2x.webp");
+  }
 }
 
 .news__text {

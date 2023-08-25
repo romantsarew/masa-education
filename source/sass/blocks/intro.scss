@@ -36,16 +36,29 @@
 .intro__slide--internship {
   background-image: url("../img/intro/internship.webp");
   background-position: center;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/intro/internship@2x.webp");
+  }
 }
+
 
 .intro__slide--volunteering {
   background-image: url("../img/intro/volunteering.webp");
   background-position: center;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/intro/volunteering@2x.webp");
+  }
 }
 
 .intro__slide--experience {
-  background-image: url("../img/intro/experience.webp");
+  background-image: url("../img/intro/education.webp");
   background-position: center;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/intro/education@2x.webp");
+  }
 }
 
 .swiper .intro__slide-pagination {
