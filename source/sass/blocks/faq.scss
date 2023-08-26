@@ -219,7 +219,7 @@
 
   &:not(:disabled):focus {
     @include focus;
-    background-color: $color-default-white;;
+    background-color: $color-default-white;
     outline: 1px solid #316dc2;
   }
 
