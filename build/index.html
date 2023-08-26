@@ -82,7 +82,7 @@
               <use href="img/sprite/sprite.svg#logo"></use>
             </svg>
           </a>
-          <button class="header__button" type="button">Меню
+          <button class="header__button" type="button" aria-expanded="false" id="menuToggle">Меню
             <span>Открыть навигацию сайта.</span>
           </button>
         </div>
@@ -542,7 +542,7 @@
                 <button class="faq__button is-closed" type="button" data-accordion="button"
                   aria-label="открыть описание пункта."></button>
                 <div class="faq__text" data-accordion="content">
-                  <p>Полная стоимость определяется организаторами в&nbsp;зависимости от&nbsp;направления.
+                  <p>Полная стоимость определяется организаторами в&nbsp;зависимости от&nbsp;направления.<br>
                     В&nbsp;большинстве случаев
                     грант &laquo;Маса&raquo; не&nbsp;покрывает полную стоимость программы, и&nbsp;поэтому
                     предусматривается определённая доля
@@ -763,8 +763,8 @@
                         <textarea id="message" name="message" required aria-label="Ваше сообщение."></textarea>
                       </label>
                     </div>
-                    <div class="feedback__input custom-select" data-select data-validate-type="select"
-                      data-name="выбор города.">
+                    <div class="feedback__input custom-select" data-select data-validate-type="select" data-required="true"
+                    data-name="выбор города." data-message-base="Поле обязательно к заполнению">
                       <span class="form__select-label form__select-label">Выберите город</span>
                       <span class="form__select-error custom-select__error">Выберите одну из опций</span>
                       <button class="form__select-button custom-select__button" type="button"
@@ -787,7 +787,7 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="feedback__check">
+                    <div class="feedback__check" data-validate-type="checkbox", data-message-base="Поле обязательно к заполнению">
                       <label for="personal">
                         <input id="personal" name="personal" value="personal-data" type="checkbox">
                         <span class="feedback__sort" tabindex="0"></span>
@@ -910,7 +910,7 @@
               data-message-base="поле обязательно к заполнению" data-message-extra="некорректно заполнено поле"
               data-required>
               <label for="modal-name">Имя
-                <input type="text" id="modal-name" name="modal-name" required aria-label="ваше имя.">
+                <input type="text" id="modal-name" name="modal-name" required aria-label="ваше имя." autofocus data-focus-visible-added>
               </label>
             </div>
             <div class="form__tel form__input" data-validate-type="phone" data-on-input-validate
@@ -920,10 +920,9 @@
                 <input type="tel" id="modal-tel" name="modal-tel" required aria-label="ваш телефон.">
               </label>
             </div>
-            <div class="form__select form__input custom-select" data-select data-validate-type="select"
-              data-name="выбор города.">
+            <div class="form__select form__input custom-select" data-select data-validate-type="select" data-required="true"
+              data-name="выбор города." data-message-base="Поле обязательно к заполнению">
               <span class="form__select-label">Выберите город</span>
-              <span class="form__select-error custom-select__error">Выберите одну из опций</span>
               <button class="form__select-button custom-select__button" type="button"
                 aria-label="Выберите одну из опций">
                 <span class="form__select-text custom-select__text"></span>
@@ -940,7 +939,7 @@
                 </li>
               </ul>
             </div>
-            <div class="form__check">
+            <div class="form__check"  data-validate-type="checkbox", data-message-base="Поле обязательно к заполнению">
               <label for="modal-personal">
                 <input id="modal-personal" name="modal-personal" value="personal-data" type="checkbox" required>
                 <span class="form__sort" tabindex="0"></span>

@@ -172,7 +172,7 @@
 
 @media (max-width: $mobile-width) {
   .conditions__container {
-    padding: 67px 0 67px;
+    padding: 71px 0 64px;
     gap: 32px;
   }
 
@@ -211,7 +211,7 @@
     & ol {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 15px;
       padding-left: 15px;
     }
   }

@@ -2445,6 +2445,10 @@ button,
   letter-spacing: -0.3px;
   background-color: transparent;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .btn::after {
   position: absolute;
@@ -2866,6 +2870,8 @@ button,
   background-color: #316dc2;
   border-radius: 16px;
   padding: 35px 25px;
+  max-height: 545px;
+  overflow-y: auto;
 }
 .header__nav-list li {
   line-height: 16px;
@@ -2896,6 +2902,9 @@ button,
 }
 .header__nav-list a:focus {
   color: rgb(255, 255, 255);
+}
+.header__nav-list a:focus-visible {
+  outline: none;
 }
 .header__nav-list a:active {
   outline: 1px solid #ffffff;
@@ -2975,6 +2984,10 @@ button,
   color: #316dc2;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .header__button:hover {
   background-color: #316dc2;
@@ -3543,7 +3556,7 @@ button,
 
 .intro__slide-container {
   position: relative;
-  padding: 417px 0 0;
+  padding: 417px 0 58px;
   min-height: 800px;
   max-width: 1240px;
   margin: 0 auto;
@@ -3565,6 +3578,15 @@ button,
     background-image: url("../img/intro/internship@2x.webp");
   }
 }
+.intro__slide--internship .intro__slide-container {
+  padding: 430px 0 60px;
+}
+.intro__slide--internship .intro__slide-top {
+  padding: 40px 50px 32px;
+}
+.intro__slide--internship .intro__slide-bottom {
+  padding: 2px 50px 37px;
+}
 
 .intro__slide--volunteering {
   background-image: url("../img/intro/volunteering.webp");
@@ -3574,6 +3596,15 @@ button,
   .intro__slide--volunteering {
     background-image: url("../img/intro/volunteering@2x.webp");
   }
+}
+.intro__slide--volunteering .intro__slide-container {
+  padding: 430px 0 60px;
+}
+.intro__slide--volunteering .intro__slide-top {
+  padding: 42px 50px 30px;
+}
+.intro__slide--volunteering .intro__slide-bottom {
+  padding: 0 50px 37px;
 }
 
 .intro__slide--experience {
@@ -3716,10 +3747,13 @@ button,
     padding: 0 45px;
   }
   .intro__slide-container {
-    padding: 685px 0 35px 0;
+    padding: 685px 0 60px 0;
     min-height: 1024px;
     max-width: 659px;
     margin: 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .intro__slide-top {
     padding: 32px 40px 24px;
@@ -3727,7 +3761,7 @@ button,
   .intro__slide-top p {
     font-size: 36px;
     line-height: 44px;
-    letter-spacing: -1.1px;
+    letter-spacing: -1.3px;
   }
   .intro__slide-bottom {
     padding: 0 40px 31px;
@@ -3742,6 +3776,18 @@ button,
   }
   .intro__slide-bottom div {
     padding-top: 3px;
+  }
+  .intro__slide--internship .intro__slide-top {
+    padding: 30px 40px 25px;
+  }
+  .intro__slide--internship .intro__slide-bottom {
+    padding: 2px 40px 30px;
+  }
+  .intro__slide--volunteering .intro__slide-top {
+    padding: 30px 40px 25px;
+  }
+  .intro__slide--volunteering .intro__slide-bottom {
+    padding: 2px 40px 30px;
   }
 }
 @media (max-width: 767px) {
@@ -3780,7 +3826,7 @@ button,
   .intro__slide-top p {
     font-size: 22px;
     line-height: 26px;
-    letter-spacing: -0.6px;
+    letter-spacing: -1.1px;
   }
   .intro__slide-bottom {
     padding: 0;
@@ -3827,6 +3873,26 @@ button,
     top: 0;
     right: -10px;
   }
+  .intro__slide--internship .intro__slide-container {
+    padding: 243px 0 20px;
+  }
+  .intro__slide--internship .intro__slide-top {
+    padding: 20px 30px 16px 15px;
+    border-radius: 0 16px 16px 0;
+  }
+  .intro__slide--internship .intro__slide-bottom {
+    padding: 0;
+  }
+  .intro__slide--volunteering .intro__slide-container {
+    padding: 243px 0 20px;
+  }
+  .intro__slide--volunteering .intro__slide-top {
+    padding: 20px 30px 16px 15px;
+    border-radius: 0 16px 16px 0;
+  }
+  .intro__slide--volunteering .intro__slide-bottom {
+    padding: 0;
+  }
   .intro__link {
     min-height: 42px;
     padding: 0 53px 0 20px;
@@ -3851,6 +3917,13 @@ button,
   margin-bottom: 20px;
 }
 
+.form .is-invalid {
+  color: #ff5e66;
+  font-size: 12px;
+  line-height: 12px;
+  position: static;
+}
+
 .form__input {
   width: 100%;
   margin-bottom: 18px;
@@ -3867,11 +3940,6 @@ button,
   font-size: 14px;
   line-height: 18px;
   color: rgba(72, 72, 72, 0.8);
-}
-.form__input .is-invalid {
-  color: #ff5e66;
-  font-size: 12px;
-  line-height: 12px;
 }
 .form__input .is-valid {
   color: #11df07;
@@ -3983,7 +4051,7 @@ button,
   cursor: pointer;
   position: relative;
   min-height: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 .form__check label input[type=checkbox]:checked + .form__sort::before {
   position: absolute;
@@ -4077,6 +4145,7 @@ button,
   margin: 0 auto;
   letter-spacing: -0.5px;
   padding: 10px 75px 10px 30px;
+  margin-top: 25px;
 }
 
 @media (max-width: 1199px) {
@@ -4167,7 +4236,7 @@ button,
   }
 }
 .about__container {
-  padding: 120px 0 60px;
+  padding: 117px 0 60px;
   max-width: 1240px;
   margin: 0 auto;
   display: -webkit-box;
@@ -4236,6 +4305,7 @@ button,
   color: #316dc2;
   font-weight: 400;
   margin: 0;
+  letter-spacing: -0.6px;
 }
 .about__text p {
   margin: 0;
@@ -4802,6 +4872,10 @@ button,
     min-width: 232px;
     letter-spacing: -0.5px;
     padding-left: 30px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
   .programs__top h2 {
     font-size: 34px;
@@ -5139,7 +5213,7 @@ button,
 }
 @media (max-width: 767px) {
   .conditions__container {
-    padding: 67px 0 67px;
+    padding: 71px 0 64px;
     gap: 32px;
   }
   .conditions__travel {
@@ -5176,7 +5250,7 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 16px;
+    gap: 15px;
     padding-left: 15px;
   }
   .conditions__rule {
@@ -5259,6 +5333,10 @@ button,
   background-color: transparent;
   border-radius: 20px;
   min-height: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .news__control.is-active {
   border: 1px solid #316dc2;
@@ -5955,6 +6033,7 @@ button,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-height: 100%;
 }
 .faq__item:hover {
   background-color: #ffffff;
@@ -5995,15 +6074,13 @@ button,
   opacity: 30%;
 }
 
-.faq__text {
-  overflow-y: auto;
-}
-
 .faq__item.is-active {
   background-color: #316dc2;
   padding-bottom: 32px;
   padding-top: 42px;
   min-height: 204px;
+  max-height: 100%;
+  height: 100%;
 }
 .faq__item.is-active h3 {
   color: #ffffff;
@@ -6012,8 +6089,9 @@ button,
 .faq__item.is-active p {
   color: #ffffff;
   margin: 0;
-  max-width: 700px;
   letter-spacing: -0.5px;
+  max-height: 100%;
+  height: 100%;
 }
 .faq__item.is-active button {
   top: 40px;
@@ -6026,7 +6104,7 @@ button,
   border-color: #ffffff;
 }
 .faq__item.is-active:focus button {
-  background-color: transparent;
+  background-color: #ffffff;
   border: 1px solid #ffffff;
 }
 .faq__item.is-active:focus button::before {
@@ -6061,6 +6139,10 @@ button,
   border-radius: 50%;
   background-color: #316dc2;
   border: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .faq__button.is-closed::after {
   position: absolute;
@@ -6093,12 +6175,15 @@ button,
 .faq__button:hover::before {
   border-color: #ffffff;
 }
-.faq__button:focus {
-  background-color: transparent;
-  border: 1px solid #ffffff;
+.faq__button:not(:disabled):focus {
+  background-color: #ffffff;
+  outline: 1px solid #316dc2;
 }
 .faq__button:focus::before {
-  border-color: #ffffff;
+  border-color: #316dc2;
+}
+.faq__button:focus::after {
+  border-color: #316dc2;
 }
 .faq__button:active {
   background-color: #ffffff;
@@ -6152,7 +6237,6 @@ button,
   }
   .faq__item.is-active p {
     line-height: 20px;
-    max-width: 90%;
     letter-spacing: -0.5px;
   }
   .faq__item.is-active h3 {
@@ -6174,12 +6258,15 @@ button,
   .faq__container {
     max-width: 100%;
     padding: 35px 0;
-    gap: 35px;
+    gap: 32px;
   }
   .faq__container h2 {
     font-size: 20px;
     line-height: 20px;
     letter-spacing: -0.5px;
+  }
+  .faq__list {
+    gap: 11px;
   }
   .faq__item {
     padding: 21px 15px 20px;
@@ -6202,6 +6289,9 @@ button,
     max-width: 100%;
     font-size: 14px;
     line-height: 20px;
+  }
+  .faq__item.is-active p br {
+    display: none;
   }
   .faq__title {
     font-size: 16px;
@@ -7014,7 +7104,7 @@ button,
   cursor: pointer;
   position: relative;
   min-height: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 5px;
 }
 .feedback__check label input[type=checkbox]:checked + .feedback__sort::before {
   position: absolute;
@@ -7121,6 +7211,7 @@ button,
   color: #ffffff;
   padding-top: 12px;
   width: 100%;
+  margin-top: 40px;
 }
 .feedback__button:not(:disabled):hover, .feedback__button:not(:disabled):focus {
   background-color: #ffffff;
@@ -7203,7 +7294,7 @@ button,
   }
   .feedback__form-container label {
     line-height: 20px;
-    gap: 5px;
+    gap: 4px;
   }
   .feedback .custom-select {
     gap: 4px;
@@ -7215,7 +7306,7 @@ button,
   .form .feedback__input {
     gap: 6px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
   .form .feedback__input .form__select-button {
     height: 50px;
@@ -7253,14 +7344,14 @@ button,
   }
   .feedback__form-container {
     max-width: 100%;
-    padding: 50px 15px 50px;
+    padding: 52px 15px 50px;
     min-height: 753px;
   }
   .feedback__form-container h2 {
     font-size: 18px;
     line-height: 22px;
     letter-spacing: -0.5px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
   .feedback__form-container p {
     font-size: 14px;
@@ -7308,6 +7399,7 @@ button,
   .feedback__button {
     padding-top: 5px;
     padding-right: 55px;
+    margin: 0;
   }
 }
 /* @mixin hover-focus {

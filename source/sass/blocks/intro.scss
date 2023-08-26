@@ -25,7 +25,7 @@
 
 .intro__slide-container {
   position: relative;
-  padding: 417px 0 0;
+  padding: 417px 0 58px;
   min-height: 800px;
   max-width: 1240px;
   margin: 0 auto;
@@ -40,8 +40,19 @@
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/intro/internship@2x.webp");
   }
-}
 
+  & .intro__slide-container {
+    padding: 430px 0 60px;
+  }
+
+  & .intro__slide-top {
+    padding: 40px 50px 32px;
+  }
+
+  & .intro__slide-bottom {
+    padding: 2px 50px 37px;
+  }
+}
 
 .intro__slide--volunteering {
   background-image: url("../img/intro/volunteering.webp");
@@ -49,6 +60,18 @@
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/intro/volunteering@2x.webp");
+  }
+
+  & .intro__slide-container {
+    padding: 430px 0 60px;
+  }
+
+  & .intro__slide-top {
+    padding: 42px 50px 30px;
+  }
+
+  & .intro__slide-bottom {
+    padding: 0 50px 37px;
   }
 }
 
@@ -85,7 +108,8 @@
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
   margin: 0;
 }
 
@@ -192,10 +216,11 @@
   }
 
   .intro__slide-container {
-    padding: 685px 0 35px 0;
+    padding: 685px 0 60px 0;
     min-height: 1024px;
     max-width: 659px;
     margin: 0;
+    justify-content: flex-end;
   }
 
   .intro__slide-top {
@@ -204,7 +229,7 @@
     & p {
       font-size: 36px;
       line-height: 44px;
-      letter-spacing: -1.1px;
+      letter-spacing: -1.3px;
     }
   }
 
@@ -220,6 +245,26 @@
 
     & div {
       padding-top: 3px;
+    }
+  }
+
+  .intro__slide--internship {
+    & .intro__slide-top {
+      padding: 30px 40px 25px;
+    }
+
+    & .intro__slide-bottom {
+      padding: 2px 40px 30px;
+    }
+  }
+
+  .intro__slide--volunteering {
+    & .intro__slide-top {
+      padding: 30px 40px 25px;
+    }
+
+    & .intro__slide-bottom {
+      padding: 2px 40px 30px;
     }
   }
 }
@@ -266,7 +311,7 @@
     & p {
       font-size: 22px;
       line-height: 26px;
-      letter-spacing: -0.6px;
+      letter-spacing: -1.1px;
     }
   }
 
@@ -310,6 +355,36 @@
         top: 0;
         right: -10px;
       }
+    }
+  }
+
+  .intro__slide--internship {
+    & .intro__slide-container {
+      padding: 243px 0 20px;
+    }
+
+    & .intro__slide-top {
+      padding: 20px 30px 16px 15px;
+      border-radius: 0 16px 16px 0;
+    }
+
+    & .intro__slide-bottom {
+      padding: 0;
+    }
+  }
+
+  .intro__slide--volunteering {
+    & .intro__slide-container {
+      padding: 243px 0 20px;
+    }
+
+    & .intro__slide-top {
+      padding: 20px 30px 16px 15px;
+      border-radius: 0 16px 16px 0;
+    }
+
+    & .intro__slide-bottom {
+      padding: 0;
     }
   }
 
