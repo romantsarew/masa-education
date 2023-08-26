@@ -47,6 +47,7 @@
   background-color: transparent;
   border-radius: 20px;
   min-height: 40px;
+  user-select: none;
 
   &.is-active {
     border: 1px solid #316dc2;

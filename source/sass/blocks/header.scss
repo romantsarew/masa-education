@@ -66,6 +66,8 @@
   background-color: #316dc2;
   border-radius: 16px;
   padding: 35px 25px;
+  max-height: 545px;
+  overflow-y: auto;
 
   & li {
     line-height: 16px;
@@ -91,6 +93,10 @@
     &:focus {
       @include focus;
       color: rgba(255, 255, 255, 1);
+    }
+
+    &:focus-visible {
+      outline: none;
     }
 
     &:active {
@@ -165,6 +171,7 @@
   color: #316dc2;
   text-transform: uppercase;
   cursor: pointer;
+  user-select: none;
 
   &:hover {
     @include hover;

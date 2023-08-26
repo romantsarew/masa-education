@@ -4,6 +4,7 @@ function burgerMenuInit() {
   const navButton = document.querySelector('.header__button');
   const navLinks = document.querySelectorAll('.header__nav-list a');
   const navSublists = document.querySelectorAll('.header__nav-sublist');
+  const firstMenuItem = navMain.querySelector('.header__nav-list a');
   const body = document.body;
 
   navMain.classList.remove('header__nav--nojs');
@@ -22,6 +23,10 @@ function burgerMenuInit() {
           navSublists.forEach(function (sublist) {
             sublist.classList.remove('header__nav-sublist--opened');
           });
+
+          if (firstMenuItem) {
+            firstMenuItem.focus();
+          }
         } else {
           navMain.classList.add('header__nav--closed');
           navMain.classList.remove('header__nav--opened');

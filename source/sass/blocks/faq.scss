@@ -38,6 +38,7 @@
   outline: 1px solid #316dc2;
   min-height: 120px;
   justify-content: center;
+  max-height: 100%;
 
   &:hover {
     background-color: $color-default-white;
@@ -90,15 +91,13 @@
   }
 }
 
-.faq__text {
-  overflow-y: auto;
-}
-
 .faq__item.is-active {
   background-color: #316dc2;
   padding-bottom: 32px;
   padding-top: 42px;
   min-height: 204px;
+  max-height: 100%;
+  height: 100%;
 
   & h3 {
     color: $color-default-white;
@@ -108,8 +107,9 @@
   & p {
     color: $color-default-white;
     margin: 0;
-    max-width: 700px;
     letter-spacing: -0.5px;
+    max-height: 100%;
+    height: 100%;
   }
 
   & button {
@@ -129,7 +129,7 @@
 
   &:focus button {
     @include focus;
-    background-color: transparent;
+    background-color: $color-default-white;
     border: 1px solid $color-default-white;
   }
 
@@ -174,6 +174,7 @@
   border-radius: 50%;
   background-color: #316dc2;
   border: none;
+  user-select: none;
 
   &.is-closed {
     &::after {
@@ -216,15 +217,20 @@
     border-color: $color-default-white;
   }
 
-  &:focus {
+  &:not(:disabled):focus {
     @include focus;
-    background-color: transparent;
-    border: 1px solid $color-default-white;
+    background-color: $color-default-white;
+    outline: 1px solid #316dc2;
   }
 
   &:focus::before {
-    @include hover;
-    border-color: $color-default-white;
+    @include focus;
+    border-color: #316dc2;
+  }
+
+  &:focus::after {
+    @include focus;
+    border-color: #316dc2;
   }
 
   &:active {
@@ -286,7 +292,6 @@
 
     & p {
       line-height: 20px;
-      max-width: 90%;
       letter-spacing: -0.5px;
     }
 
@@ -313,13 +318,17 @@
   .faq__container {
     max-width: 100%;
     padding: 35px 0;
-    gap: 35px;
+    gap: 32px;
 
     & h2 {
       font-size: 20px;
       line-height: 20px;
       letter-spacing: -0.5px;
     }
+  }
+
+  .faq__list {
+    gap: 11px;
   }
 
   .faq__item {
@@ -344,6 +353,10 @@
       max-width: 100%;
       font-size: 14px;
       line-height: 20px;
+
+      & br {
+        display: none;
+      }
     }
   }
 
