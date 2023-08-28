@@ -47,10 +47,17 @@
       border-color: rgba(72, 72, 72, 1);
     }
 
-    &:not(:disabled):focus {
+    &:not(:disabled):invalid:focus {
       @include focus;
       outline: none;
       border-color: rgba(72, 72, 72, 1);
+      background-color: transparent;
+    }
+
+
+    &:focus-visible {
+      outline: none;
+      border-color: #484848;
     }
 
     &:not(:disabled):active {
@@ -63,12 +70,12 @@
       border-color: rgba(169, 175, 183, 0.5);
       background-color: rgba(169, 175, 183, 0.2);
     }
-
-    &:invalid {
-      border-color: #ff5e66;
-      background-color: rgba(255, 94, 102, 0.2);
-    }
   }
+}
+
+.form__input.is-invalid input {
+    border-color: #ff5e66;
+    background-color: rgba(255, 94, 102, 0.2);
 }
 
 .form__select-text {

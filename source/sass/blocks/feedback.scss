@@ -39,6 +39,10 @@
     border-radius: 8px;
     color: $color-default-white;
 
+    &:not(:disabled):invalid:focus {
+      border-color: $color-default-white;
+    }
+
     &:not(:disabled):hover,
     &:not(:disabled):focus,
     &:not(:disabled):active {
