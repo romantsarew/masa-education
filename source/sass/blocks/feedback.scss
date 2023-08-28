@@ -73,6 +73,11 @@
   }
 }
 
+.feedback__message.is-invalid textarea {
+  border-color: #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
+}
+
 .feedback__form {
   display: flex;
   flex-direction: column;
@@ -154,7 +159,9 @@
   cursor: default;
 }
 
-.feedback__check input[type="checkbox"]:checked:disabled + .feedback__sort::before {
+.feedback__check
+  input[type="checkbox"]:checked:disabled
+  + .feedback__sort::before {
   background-image: url("../img/svg/check.svg");
 }
 
@@ -162,19 +169,32 @@
   background-color: $color-default-white;
 }
 
-.feedback__check:hover input[type="checkbox"]:not(:disabled):checked + .feedback__sort,
-.feedback__check:focus input[type="checkbox"]:not(:disabled):checked + .feedback__sort {
+.feedback__check:hover
+  input[type="checkbox"]:not(:disabled):checked
+  + .feedback__sort,
+.feedback__check:focus
+  input[type="checkbox"]:not(:disabled):checked
+  + .feedback__sort {
   background-color: #316dc2;
   outline: 1px solid $color-default-white;
 }
 
-.feedback__check:hover input[type="checkbox"]:not(:disabled):checked + .feedback__sort::before,
-.feedback__check:focus input[type="checkbox"]:not(:disabled):checked + .feedback__sort::before {
+.feedback__check:hover
+  input[type="checkbox"]:not(:disabled):checked
+  + .feedback__sort::before,
+.feedback__check:focus
+  input[type="checkbox"]:not(:disabled):checked
+  + .feedback__sort::before {
   background-image: url("../img/svg/check.svg");
 }
 
 .feedback__check input[type="checkbox"]:checked + .feedback__sort::before {
   background-image: url("../img/svg/check-blue.svg");
+}
+
+.feedback__check.is-invalid .feedback__sort {
+  outline: 1px solid #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
 }
 
 .feedback__name {

@@ -335,6 +335,10 @@
   .header__nav--opened ~ .header__button {
     margin-top: 0;
   }
+
+  .header__nav--opened {
+    max-height: 350px;
+  }
 }
 
 @media (max-width: $mobile-width) {

@@ -240,7 +240,8 @@
     }
 
     .custom-select__button {
-      border: 2px solid #ff1553;
+      border-color: #ff5e66;
+      background-color: rgba(255, 94, 102, 0.2);
 
       &:focus,
       &:hover {

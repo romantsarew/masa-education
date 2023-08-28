@@ -1381,7 +1381,8 @@ button.swiper-pagination-bullet {
   opacity: 1;
 }
 .custom-select.is-invalid .custom-select__button {
-  border: 2px solid #ff1553;
+  border-color: #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
 }
 .custom-select.is-invalid .custom-select__button:focus, .custom-select.is-invalid .custom-select__button:hover {
   border: 2px solid rgba(255, 21, 83, 0.5);
@@ -3129,6 +3130,9 @@ button,
   .header__nav--opened ~ .header__button {
     margin-top: 0;
   }
+  .header__nav--opened {
+    max-height: 350px;
+  }
 }
 @media (max-width: 767px) {
   .header__container {
@@ -3974,16 +3978,8 @@ button,
   border-color: rgba(169, 175, 183, 0.5);
   background-color: rgba(169, 175, 183, 0.2);
 }
-.form__input input:not(:-moz-placeholder-shown), .form__input .form__select-button:not(:-moz-placeholder-shown) {
-  border-color: #ff5e66;
-  background-color: rgba(255, 94, 102, 0.2);
-}
-.form__input input:not(:-ms-input-placeholder), .form__input .form__select-button:not(:-ms-input-placeholder) {
-  border-color: #ff5e66;
-  background-color: rgba(255, 94, 102, 0.2);
-}
-.form__input input:not(:placeholder-shown),
-.form__input .form__select-button:not(:placeholder-shown) {
+.form__input input:invalid,
+.form__input .form__select-button:invalid {
   border-color: #ff5e66;
   background-color: rgba(255, 94, 102, 0.2);
 }
@@ -4137,6 +4133,11 @@ button,
   font-size: 12px;
   line-height: 12px;
   margin-top: 5px;
+}
+
+.form__check.is-invalid .form__sort {
+  outline: 1px solid #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
 }
 
 .form__button {
@@ -7059,6 +7060,11 @@ button,
   margin-bottom: 19px;
 }
 
+.feedback__message.is-invalid textarea {
+  border-color: #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
+}
+
 .feedback__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7162,6 +7168,11 @@ button,
 
 .feedback__check input[type=checkbox]:checked + .feedback__sort::before {
   background-image: url("../img/svg/check-blue.svg");
+}
+
+.feedback__check.is-invalid .feedback__sort {
+  outline: 1px solid #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
 }
 
 .feedback__name {
